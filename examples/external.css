@@ -1,0 +1,21 @@
+h3{
+    color:chartreuse 
+ }
+
+ p{
+     color:red
+ }
+
+ .abbrivation{
+     color: green;
+ }
+
+ .usage{
+     color:orange;
+     background-color:black;                
+ }
+
+ #new{
+     color:black;
+     background-color: aqua;
+ }
