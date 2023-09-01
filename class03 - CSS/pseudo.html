@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#block  {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+#block:hover {
+  background-color: blue;
+}
+
+input::selection{
+    background-color: green;
+    color: white;
+}
+
+input:focus{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.images:hover{
+    border: 3px solid black;
+    width: 250px;
+    height: 200px;
+    opacity: 1;
+
+}
+.images{
+
+    opacity: 0.4;
+
+}
+</style>
+</head>
+<body>
+
+<p>Mouse over the div element below to change its background color:</p>
+
+<div id="block">Mouse Over Me</div>
+
+<br>
+
+<label> Your name : <input type="text"></label>
+
+<br>
+<br>
+
+<div  style="clear: left;">
+    <img class="images" src="https://www.suryatrainings.com/_next/image?url=https%3A%2F%2Fdz8fbjd9gwp2s.cloudfront.net%2Flogos%2F62219d340cf27e28dc86e614.png%3Fv%3D6&w=256&q=75">
+</div>
+
+</body>
+</html>
