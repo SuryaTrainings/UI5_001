@@ -1,0 +1,32 @@
+.box{
+    border: 1px solid black;
+    width: 200px;
+    height: 270px;
+    float: left;
+    margin: 2px;
+    padding: 2px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+
+.box-def{
+    border: 1px solid black;
+    margin: 2px;
+    padding: 5px;
+    width: 180px;
+    height: 70px;
+    background-color: white;
+    font-style: italic;
+    color: black;
+    align-content: center;
+}
+
+.box-use{
+    border: 1px solid black;
+    height: 100px;
+    margin: 2px;
+    padding: 5px;
+    width: 180px;
+    background-color:green;
+}
