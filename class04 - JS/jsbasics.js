@@ -113,32 +113,4 @@ aName;
 //Concat 
 var A = 'Easy course' + name;
 
-A.concat(Name);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+A.concat("HEllo");
