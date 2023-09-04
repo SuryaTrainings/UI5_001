@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            .child1, .child2 {
+                color: blue;
+            }
+
+            .parent{
+                border: 2px solid black;
+                margin: 3px;
+                padding: 4px;
+                float: left;
+
+                height: 200px;
+                width: 200px;
+            }
+
+            .child1, .child2 {
+                height: 70px;
+                border: 2px solid black;
+                margin: 5px;
+                padding: 5px;
+                background-color: green;
+                color: white;
+            }
+
+            input:hover{
+                /* background-color: brown; */
+            }
+
+            input::selection{
+                background-color: red;
+            }
+
+            img{
+                opacity: 0.4;
+            }
+
+            img:hover{
+                opacity: 1;
+                height: 150px;
+                width: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            What is HTML ?
+            <div class="child1">
+                Abbrivation : Hypertext markup lang
+            </div>
+            <div class="child2">
+                Use : Static web pages 
+            </div>
+        </div>
+
+        
+        <div class="parent">
+            What is HTML ?
+            <div class="child1">
+                Abbrivation : Hypertext markup lang
+            </div>
+            <div class="child2">
+                Use : Static web pages 
+            </div>
+        </div>
+
+        
+        <div class="parent">
+            What is HTML ?
+            <div class="child1">
+                Abbrivation : Hypertext markup lang
+            </div>
+            <div class="child2">
+                Use : Static web pages 
+            </div>
+        </div>
+
+        <div class="inputs" style="clear: left;">
+            <div>
+                <br>
+                <br>
+                <br>
+                <label> Your name <input type="text"></label>
+            </div>
+
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png">
+        </div>
+    </body>
+</html>
