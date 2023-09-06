@@ -92,10 +92,20 @@ for( i=0; i< aFruits.length;i++ ){
     console.log( item );
 }
 
+aArray = [ "1", "2", "3" ]
+(3) ['1', '2', '3']
+aArray.forEach(function(item){
+    console.log(item)
+});
+// VM1219:2 1
+// VM1219:2 2
+// VM1219:2 3
+
+
 // for each 
-aFruits.forEach(function(item)){
-    console.log(item);
-}
+// aFruits.forEach(function(item){
+//     console.log(item);
+// });
 
 //Note - performance wise - for loop faster, than for each.
 
@@ -105,7 +115,7 @@ aFruits.forEach(function(item)){
 //Split function
 var name = "SAP UI5 FIORI OData"
 
-var aName = name.split();
+var aName = name.split(" ");
 
 aName;
 
@@ -114,3 +124,26 @@ aName;
 var A = 'Easy course' + name;
 
 A.concat("HEllo");
+
+var name = "hello world";
+// undefined
+var aName = name.split();
+// undefined
+aName
+// ['hello world']
+var aName = name.split(" ");
+// undefined
+aName
+// (2) ['hello', 'world']
+var y = name + 'Very good morning';
+// undefined
+y
+// 'hello worldVery good morning'
+var y = name + ' Very good morning';
+// undefined
+y
+// 'hello world Very good morning'
+y.concat(" wlecome to course - SAP UI5 FIORI OData");
+// 'hello world Very good morning wlecome to course - SAP UI5 FIORI OData'
+y
+// 'hello world Very good morning'
