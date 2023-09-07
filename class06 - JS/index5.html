@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="external.js">
+    </script>
+</head>
+
+<body id="color">
+    <div>
+        <form onsubmit="">
+        <table>
+            <tr>
+                <td>User name</td>
+                <td> <input id = "userName" type="text"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td> <input id = "password" type="password"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="validateUser()"> Login
+                    </button>
+                </td>
+            </tr>
+            <tr><td>email id</td>
+                <td><input type="email"></td>
+            </tr>
+        </tr>
+        <tr><td></td>
+            <td><input type="submit" value="submit"></td>
+        </tr>
+        </form>
+        </table>
+        <p> Background change <br>
+        <button onclick="changeCSS()">Red color </button><br>
+        <button  onclick="changeCSS()">Blue color </button><br>
+        <button  onclick="changeCSS()">Green color </button>
+        <br>
+        <button  onclick="addHtmlElement()">Add Element </button>
+        <div id="addHere"></div>    
+    </div>
+</body>
+
+</html>
