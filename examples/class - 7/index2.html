@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script>
+            function onGreen(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "green";
+            }
+            function onYellow(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "yellow";
+            }
+            function onRed(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "red";
+            }
+            function addHtmlElement(){
+                //1 - tag created
+                var oNewElement = document.createElement("h3");
+
+                //2 - add text 
+                var oTextNode = document.createTextNode("New heading tag - h4");
+
+                //3 - Append text to H3 element 
+                oNewElement.appendChild(oTextNode);
+
+                //4 - Get Div tag source 
+                var oDiv = document.getElementById("addHere");
+
+                //5 - attach h3 element / append h3 element
+                oDiv.appendChild(oNewElement);
+            }
+        </script>
+    </head>
+    <body id="color">
+        <button onclick="onGreen()">Green</button>
+        <button onclick="onYellow()">Yellow</button>
+        <button onclick="onRed()">Red</button>
+        <button onclick="addHtmlElement()">Add H3 Tag</button>
+
+        <h3></h3>
+
+        <div id="addHere">
+
+        </div>
+        
+    </body>
+</html>

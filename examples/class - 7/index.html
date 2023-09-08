@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function onGreen(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "green";
+            }
+            function onYellow(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "yellow";
+            }
+            function onRed(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = "red";
+            }
+            function onColor(){
+                var oColor = document.getElementById("color");
+                oColor.style.backgroundColor = document.getElementsByTagName("button").value;
+            }
+        </script>
+    </head>
+    <body id="color">
+        <button onclick="onGreen()">Green</button>
+        <button onclick="onYellow()">Yellow</button>
+        <button onclick="onRed()">Red</button>
+    </body>
+</html>

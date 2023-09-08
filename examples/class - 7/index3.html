@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        function onHide(){
+        $(".abbrivation").fadeOut(5000);
+        }
+
+        function onShow(){
+        $(".abbrivation").fadeIn(5000);
+        }
+
+        
+    </script>
+
+</head>
+
+<body>
+    <div>
+
+        <br>
+        <button onclick="onHide()">Hide content</button>
+        <button onclick="onShow()">Show content</button>
+        <br>
+
+        <br>
+
+        <div class="abbrivation">
+            <h3> HTML </h3>
+            <p> Hyper text markup langauage</p>
+        </div>
+        <div class="abbrivation">
+            <h3> CSS </h3>
+            <P>Cascading style sheet</P>
+        </div>
+        <div class="abbrivation">
+            <h3>
+                JS
+            </h3>
+            <p> Java script</p>
+        </div>
+    </div>
+</body>
+
+</html>
