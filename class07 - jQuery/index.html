@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        function greenBackground() {
+            $("#idBody").css("background", "green");
+        }
+        function yellowBackground() {
+            $("#idBody").css("background", "yellow");
+        }
+        function blueBackground() {
+            $("#idBody").css("background", "blue");
+        }
+        function onHide() {
+            // $(".box").hide();
+            $(".box").fadeOut("slow", function(){
+                alert("effect completed");
+            });
+        }
+
+        function onShow() {
+            // $(".box").show();
+            $(".box").fadeIn("slow", function(){
+                alert("effect completed");
+            });
+        }
+
+        function onSync(){
+
+        }
+        
+        function onAsync(){
+            console.log("statement - 1");
+            setTimeout(5000);
+            console.log("statement - 2");
+        }
+        function onStmt2(){
+            console.log("statement - 2");
+        }
+        function onSync(){
+            console.log("statement - 1");
+            setTimeout(onStmt2,5000);
+        }
+    </script>
+
+    <style>
+        .box {
+            float: left;
+            border: 2px solid black;
+            width: 100px;
+            height: 200px;
+            margin: 2px;
+            padding: 5px;
+        }
+
+        button.clear{
+            clear: left;
+        }
+    </style>
+</head>
+
+<body id="idBody">
+    <div>
+        <button onclick="greenBackground()">Green background</button>
+        <button onclick="yellowBackground()">Yellow background</button>
+        <button onclick="blueBackground()">Blue background</button>
+        <br>
+        <button onclick="onHide()"> hide abbrivations </button>
+        <button onclick="onShow()"> show abbrivations </button>
+
+        <br>
+        <br>
+
+        <div class="box">
+            <h3> What is HTML </h3>
+            <P> HTML is markup language </P>
+        </div>
+        <div class="box">
+            <h3> What is CSS </h3>
+            <P> HTML is cascading stylesheet language </P>
+        </div>
+        <div class="box">
+            <h3> What is JS </h3>
+            <P> HTML is Java Script programming language </P>
+        </div>
+
+        <br>
+    </div>
+
+    <br>
+
+    <button class="clear" onclick="onSync()"> Synchronus </button>
+    <button onclick="onAsync()"> Asynchronus </button>
+    <br>
+</body>
+
+</html>
