@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
+        <script>
+            function syn(){
+                $("h3").fadeOut("5000");
+                alert("syncall executed, before result");
+            }
+
+            function onCallBack(){
+                console.log("Function executed successfully");
+                alert("Call back function completed");
+                $("h3").fadeOut("5000");
+            }
+            function asyn(){
+                $("h3").fadeOut("5000", onCallBack);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="syn()"> Synchronus call </button>
+        <button onclick="asyn()"> Asynchronus call </button>
+        <div>
+            <h3> Call back request </h3>
+        </div>
+    </body>
+</html>
