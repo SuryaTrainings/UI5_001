@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+        <script>
+            var jsonData;
+
+            function onAjaxCall(){
+                $.ajax({
+                    url:"https://api.covidtracking.com/v1/states/current.json",
+                    success: function(data){
+                        jsonData = data;
+                        if( data !== ""){
+                    var Htmldata = "<table>";
+                    for( i=0; i < data.length; i++ ){
+                        Htmldata = Htmldata + "<tr><td>"+data[i].date+"</td><td>"+data[i].positive
+                            +"</td></tr>";
+                            console.log(Htmldata);
+                    }
+                    Htmldata = Htmldata+"</table>";
+                }
+                debugger;
+                document.write(Htmldata);
+                    }
+                });
+
+                
+            }
+        </script>
+
+        <style>
+            table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+        </style>
+
+    </head>
+    <body>
+        <button onclick="onAjaxCall()"> Get JSON data in console </button>
+        <div id="output"></div>
+    </body>
+</html>
