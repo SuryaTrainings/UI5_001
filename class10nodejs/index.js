@@ -1,5 +1,6 @@
 const reuse = require('./reuse');
 const fs = require('fs');
+const express = require('express');
 
 console.log("Simple json server application");
 
@@ -35,3 +36,11 @@ var fileContent = fs.readFile("./webapp/simpletext.txt",'utf-8',function(err, da
         console.log(data);
         return;
 });
+
+const app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello world');
+});
+
+app.listen(3099);
