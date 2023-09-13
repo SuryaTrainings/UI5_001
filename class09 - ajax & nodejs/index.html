@@ -5,11 +5,7 @@
     <script>
         function changeCSS() {
             changeStyle = document.getElementById("color");
-            changeStyle.style.backgroundColor = document.getElementsByTagName("button").value;
-            document.addEventListener('click', function(item){
-                changeStyle = e.value;
-            });
-
+            changeStyle.style.backgroundColor = document.activeElement.value;
         }
     </script>
 </head>
