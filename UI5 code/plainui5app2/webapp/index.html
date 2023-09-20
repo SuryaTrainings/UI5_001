@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script
+            src="https://ui5.sap.com/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_belize"
+            
+            data-sap-ui-libs="sap.m"></script>
+        </script>
+
+        <script>
+            var oBtn = new sap.m.Button("idBtn",{
+                text: "first UI5 Button",
+                type: "Accept",
+                press: function(){
+                    alert("Welcome to UI5 class");
+                }
+            });
+            oBtn.placeAt("canvas");
+        </script>
+    </head>
+    <body id="sapUiBody">
+        <div id="canvas"></div>
+    </body>
+</html>
