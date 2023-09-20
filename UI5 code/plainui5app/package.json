@@ -1,0 +1,14 @@
+{
+  "name": "ui5app",
+  "version": "1.0.0",
+  "description": "UI5 plain application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sapui5"
+  ],
+  "author": "surya",
+  "license": "ISC"
+}
