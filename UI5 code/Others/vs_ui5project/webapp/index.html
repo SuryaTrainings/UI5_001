@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <!-- Bootstrap script  -->
+    <script id="sap-ui-bootstrap" 
+    src="https://ui5.sap.com/resources/sap-ui-core.js" 
+    data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_fiori_3_dark">
+
+        </script>
+    <!-- Application script -->
+    <script>
+        var oBtn = new sap.m.Button("idBtn", {
+            text: "First Button with ui5 SDK",
+            press: function(){
+                alert("Welcome to UI5 Class");
+            }
+        });
+        oBtn.placeAt("canvas");
+        
+        var oBtn = new sap.m.Button("idBtn2", {
+            text: "Approval button",
+            type:"Accept"
+        });
+        oBtn.placeAt("canvas2");
+
+        
+        var oBtn = new sap.m.Button("idBtn3", {
+            text: "Reject button",
+            type:"Reject"
+        });
+        oBtn.placeAt("canvas3");
+
+        
+        var oBtn = new sap.m.Button("idBtn4", {
+            text: "Success button",
+            type:"Success"
+        });
+        oBtn.placeAt("canvas4");
+    </script>
+</head>
+
+<body class="sapUiBody">
+    <!-- UI Area -->
+    <div id="canvas"></div> <br>
+    <div id="canvas2"></div>  <br>
+    <div id="canvas3"></div>  <br>
+    <div id="canvas4"></div>  <br>
+</body>
+
+</html>
