@@ -1,0 +1,6 @@
+{
+    "sap.app": {
+        "id": "ui5app",
+        "type": "application"
+    }
+}
