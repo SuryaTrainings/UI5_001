@@ -1,10 +1,11 @@
-sap.ui.view("root.view.main",{
+sap.ui.jsview("root.view.main",{
     getControllerName: function(){
-
+        return "root.controller.main";
     },
-    createContent: function(){
+    createContent: function(oController){
         var oBtn = new sap.m.Button("idBtn",{
-            text: "JS View button"
+            text: "JS View button",
+            press: oController.onPress
         });
 
         return oBtn;
