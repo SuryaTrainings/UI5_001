@@ -1,20 +1,15 @@
-// sap.ui.define([
-//     'require',
-//     'dependency'
-// ], function(require, factory) {
-//     'use strict';
-    
-// });
-
 sap.ui.define([
-    'sap/ui/core/mvc/Controller'
-], function(oController) {
+    'sap/ui/core/mvc/Controller',
+], function (oController) {
     'use strict';
+    console.log("Basic controller loaded successfully");
+    return oController.extend("root.controller.main", {
 
-    return oController.extend("root.controller.main",{
-        onPress: function(){
-            alert("Button event fired");
+        onPress: function () {
+            alert("View button fired");
+            debugger;
+
+            console.log("Method loaded successfully");
         }
     });
-    
 });

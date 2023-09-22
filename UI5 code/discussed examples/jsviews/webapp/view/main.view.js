@@ -1,7 +1,8 @@
 sap.ui.jsview("root.view.main",{
     getControllerName: function(){
-        return "root.controller.main";
+        return "root.controller.main"
     },
+
     createContent: function(oController){
         var oBtn = new sap.m.Button("idBtn",{
             text: "JS View button",
@@ -12,3 +13,5 @@ sap.ui.jsview("root.view.main",{
     }
 }
 );
+
+//Foreach(item)
