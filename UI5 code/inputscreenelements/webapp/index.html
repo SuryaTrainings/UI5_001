@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <!-- 1.Bootstrap Area -->
+    <script id="sap-ui-bootstrap" src="https://ui5.sap.com/resources/sap-ui-core.js" data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m">
+
+        </script>
+
+    <!-- 2.Application Area -->
+    <script>
+        //Creation of inputs  
+        var Input = new sap.m.Input("idinput", {
+
+        });
+        Input.placeAt("Canvas1");
+
+
+        var Input = new sap.m.Input("idinput1", {
+            value: "This is second application"
+        });
+        Input.placeAt("Canvas2");
+
+        var Input = new sap.m.Input("idinput2", {
+            placeholder: "Enter your Name"
+        });
+        Input.placeAt("Canvas3");
+        //Creation of Checkboxes
+        var CheckBox = new sap.m.CheckBox("idcheck", {
+            text: "MR.A",
+            selected:true
+
+        });
+        CheckBox.placeAt("Canvas4");
+
+
+        var CheckBox = new sap.m.CheckBox("idcheck1", {
+            text: "MR.B"
+        });
+        CheckBox.placeAt("Canvas5");
+
+        //Creation of RadioButtons
+        var RadioButton = new sap.m.RadioButton("idradio", {
+            text: "Option A"
+
+        });
+
+        RadioButton.placeAt("Canvas6");
+
+        var RadioButton = new sap.m.RadioButton("id1radio", {
+            text: "Option B"
+        });
+
+        RadioButton.placeAt("Canvas7");
+    </script>
+
+</head>
+
+<body class="UI5Body">
+    <!-- 3. UI Area -->
+    <div id="Canvas"></div><br>
+    <div id="Canvas1"></div><br>
+    <div id="Canvas2"></div><br>
+    <div id="Canvas3"></div><br>
+    <div id="Canvas4"></div><br>
+    <div id="Canvas5"></div><br>
+    <div id="Canvas6"></div><br>
+    <div id="Canvas7"></div><br>
+</body>
+
+</html>
