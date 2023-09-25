@@ -1,6 +1,6 @@
 <mvc:View xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-    controllerName="main.controller.js">
+    controllerName="root.controller.main">
     
     <Input id="idInput" width="30%" maxLength="60"></Input>
     <Button id="idBtn" text="show data" press="onClick"></Button>
