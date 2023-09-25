@@ -11,7 +11,7 @@ sap.ui.define([
 
             console.log("Method loaded successfully");
         },
-        onClick: function(oEvent){
+        onClick: function (oEvent) {
             //Code - 1 
             alert("Tested");
 
@@ -24,7 +24,22 @@ sap.ui.define([
             //code -3 
             var oDocument = this.getView();
             var oInp = oDocument.byId("idInput");
-            alert(oInp.getValue());
+            // alert(oInp.getValue());
+            var sVal = oInp.getValue();
+            alert(sVal);
+
+
+            sap.ui.require(["sap/m/MessageToast"], function (oMessageBox) {
+                oMessageBox.show(sVal);
+            });
+
+            sap.ui.require(["sap/m/MessageBox"], function (oMessageBox) {
+                oMessageBox.alert(sVal, {
+                    title: "Alert"
+                }
+
+                );
+            });
         }
     });
 });
