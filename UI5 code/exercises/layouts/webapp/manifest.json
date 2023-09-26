@@ -1,0 +1,6 @@
+{
+    "sap.app":{
+        "id":"sapui5",
+        "type":"Third Application"
+    }
+}
