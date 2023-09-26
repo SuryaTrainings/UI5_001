@@ -5,6 +5,14 @@ sap.ui.define([
     console.log("Basic controller loaded successfully");
     return oController.extend("root.controller.main", {
 
+        // onInit:function(){
+        //     alert("welcome to the onInit method");
+        //     debugger;
+        // },
+
+        onExit: function(){
+
+        },
         onPress: function () {
             alert("View button fired");
             debugger;
@@ -27,12 +35,22 @@ sap.ui.define([
             var oDocument = this.getView();
             var oInp = oDocument.byId("idInput"); //Viewname--propertyid
             var oValue = oInp.getValue();
-            alert(oValue);
+            // alert(oValue);
 
             //4 - otherway of wrting 
             // alert( this.getView().byId("idInput").getValue() );
 
+            sap.ui.require(["sap/m/MessageToast"],function(oMessageToast){
+                oMessageToast.show(oValue);
 
+            });
+
+            sap.ui.require(["sap/m/MessageBox"],function(oMessageBox){
+                oMessageBox.success(oValue);
+
+            });
+
+            sap/m/MessageBox
         }
     });
 });
