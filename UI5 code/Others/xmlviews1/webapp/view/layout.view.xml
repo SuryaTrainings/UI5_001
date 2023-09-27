@@ -1,0 +1,26 @@
+<mvc:View xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="root.controller.main"
+    >
+    
+
+
+     <!-- 1    -->
+     <f:SimpleForm  title="Car details">
+     <f:content>
+    <Label id="idLabel1" text="Enter some text"></Label>
+    <Input id="idInput1" width="30%" maxLength="60"></Input>
+    <Button id="idBtn2" text="show data" press="onClick"></Button>
+    <Label id="idLabel2" text="Enter some text"></Label>
+    <Input id="idInput3" width="30%" maxLength="60"></Input>
+    <Button id="idBtn3" text="show data" press="onClick"></Button>
+    <Label id="idLabel4" text="Enter some text"></Label>
+    <Input id="idInput4" width="30%" maxLength="60"></Input>
+    <Button id="idBtn5" text="show data" press="onClick"></Button>
+    <Label id="idLabel5" text="Enter some text"></Label>
+    <Input id="idInput6" width="30%" maxLength="60"></Input>
+    <Button id="idBtn6" text="show data" press="onClick"></Button>
+     </f:content>
+     </f:SimpleForm>
+</mvc:View>

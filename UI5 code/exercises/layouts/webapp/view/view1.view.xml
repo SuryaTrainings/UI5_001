@@ -1,0 +1,24 @@
+<mvc:View xmlns:layout="sap.ui.layout"  xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.view1">
+
+<layout:HorizontalLayout >
+<layout:content>
+<Input id="idinput" maxLength="60" width="50%" value="sapui5" ></Input>
+<Button id="idbtn" press="onClick" text="DisplayInputText" ></Button>
+<Image src="https://img.freepik.com/free-photo/beautiful-flowers-with-water-drops_23-2150705665.jpg" width="200px"></Image>
+<Image src="https://www.shutterstock.com/shutterstock/photos/2039109833/display_1500/stock-photo-bal-ganesh-the-fun-loving-indian-god-2039109833.jpg" width="200px"></Image>
+</layout:content>
+</layout:HorizontalLayout>
+
+<layout:VerticalLayout >
+
+<layout:content>
+<Input id="idinput1" maxLength="60" width="50%" value="sapui5" ></Input>
+<Button id="idbtn1" press="onClick" text="DisplayInputText" ></Button>
+<Image src="https://img.freepik.com/free-photo/beautiful-flowers-with-water-drops_23-2150705665.jpg" width="200px"></Image>
+</layout:content>
+
+</layout:VerticalLayout>
+
+</mvc:View>

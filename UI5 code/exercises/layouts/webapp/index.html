@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <!-- 1.Bootstrap Area -->
+        <script id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-resourceroots='{
+            "root":"./"
+        }'>
+
+        </script>
+
+        <!-- 2.Application Area -->
+        <script>
+
+//Create views
+var oView = new sap.ui.view("idMain",{
+    viewName: "root.view.view1",
+    type: "XML"
+});
+oView.placeAt("Canvas");
+</script>
+
+    </head>
+    <body class="UI5Body">
+<!-- 3. UI Area -->
+<div id="Canvas"></div><br>
+
+    </body>
+</html>

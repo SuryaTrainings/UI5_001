@@ -1,0 +1,23 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.view1">
+
+<!-- Button creation -->
+<Button type="Accept" text="Accept" press="onAccept"></Button>
+<Button type="Reject" text="Reject" press="onReject"></Button>
+<Button type="Back" text="Back" press="onBack"></Button>
+<Button type="Ghost" text="Ghost" icon="sap-icon://badge"></Button>
+
+<!-- input creation -->
+<Input id="inputid" placeholder="Enter your name" showValueHelp="true" ></Input>
+
+<Label text="Email"></Label>
+<Input id="id1input" placeholder="Email"></Input>
+<Label text="Password"></Label>
+<Input id="id2input" placeholder="Password"></Input>
+
+<Input value="Books" placeholder="Enter product" editable="false"></Input>
+
+<MaskInput mask="______________" placeholder="___________" ></MaskInput>
+
+</mvc:View>
