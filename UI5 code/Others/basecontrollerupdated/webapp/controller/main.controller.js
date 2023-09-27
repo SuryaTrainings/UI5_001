@@ -1,18 +1,30 @@
 sap.ui.define([
-    'sap/ui/core/mvc/Controller'
-    ], function (oController) {
+    'sap/ui/core/mvc/Controller',
+], function (oController) {
     'use strict';
     console.log("Basic controller loaded successfully");
     return oController.extend("root.controller.main", {
-        //Global variable for this class
-        x: 399,
+
+        //Global variable
+        x:0,
 
         onInit:function(){
-            alert(x);
+            this.x = 500;
+            alert("welcome to the onInit method  "+this.x);
+            debugger;
+        },
+        onBeforeRendering:function(){
+            this.x = 20;
+            this.getView().byId("idInput4").setSelected(true);
+            alert(this.x);
+        },
+        onAfterRendering:function(){
+            $("#idMain--idForm").fadeOut(5000).fadeIn(5000);
         },
 
+        //Cleaning up variables
         onExit: function(){
-
+            alert("app close");
         },
         onPress: function () {
             alert("View button fired");

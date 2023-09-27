@@ -1,17 +1,27 @@
 sap.ui.define([
-    'sap/ui/core/mvc/Controller'
+   'root/controller/baseController'
     ], function (oController) {
     'use strict';
+        debugger;
     console.log("Basic controller loaded successfully");
+
     return oController.extend("root.controller.main", {
-        //Global variable for this class
-        x: 399,
 
         onInit:function(){
-            alert(x);
+            debugger;
+            alert(this.x);
         },
 
-        onExit: function(){
+        onBeforeRendering: function(){
+            this.getView().byId("idInput").setValue(this.x);
+        },
+
+        onAfterRendering: function(){
+            debugger;
+           $(this.getView().byId("idBtn")).fadeOut(5000).fadeIn(5000);
+        },
+
+         onExit: function(){
 
         },
         onPress: function () {
@@ -26,16 +36,17 @@ sap.ui.define([
 
             //2 - Your own logic - cureent screen 
             debugger;
-            // //Get object refernce - document
-            // var oDocument = sap.ui.getCore();
-            // var oInp = oDocument.byId("idMain--idInput"); //Viewname--propertyid
-            // var oValue = oInp.getValue();
-            // alert(oValue);
+            //Get object refernce - document
+            //var oDcouemnt = sap.ui.getCore(); - Local (current controller)--> Global (baseController)
+            var oDocument = this.oCore;
+            var oInp = oDocument.byId("idMain--idInput"); //Viewname--propertyid
+            var oValue = oInp.getValue();
+            alert(oValue);
 
             //3 - way - current screen
-            var oDocument = this.getView();
-            var oInp = oDocument.byId("idInput"); //Viewname--propertyid
-            var oValue = oInp.getValue();
+            // var oDocument = this.getView();
+            // var oInp = oDocument.byId("idInput"); //Viewname--propertyid
+            // var oValue = oInp.getValue();
             // alert(oValue);
 
             //4 - otherway of wrting 
@@ -51,7 +62,6 @@ sap.ui.define([
 
             });
 
-            sap/m/MessageBox
         }
     });
 });

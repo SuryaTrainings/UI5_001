@@ -1,0 +1,33 @@
+<mvc:View xmlns:form="sap.ui.layout.form"  
+          xmlns:mvc = "sap.ui.core.mvc"
+          xmlns = "sap.m"  
+          controllerName="root.controller.main">
+
+
+<form:SimpleForm title="Student details" id="idForm">
+    
+    <Label id="idLabel" text="Student id"></Label>
+    <Input id="idInput" width="50%" maxLength="60" value="0001"></Input>
+
+    
+    <Label id="idLabel1" text="Student name"></Label>
+    <Input id="idInput1" width="50%" maxLength="60" value="Surya"></Input>
+
+    
+    <Label id="idLabel2" text="Student grade"></Label>
+    <Input id="idInput2" width="50%" maxLength="60" value="A"></Input>
+
+    
+    <Label id="idLabel3" text="Student class"></Label>
+    <Input id="idInput3" width="50%" maxLength="60" value="8"></Input>
+
+    
+    <Label id="idLabel4" text="Student promoted" ></Label>
+    <CheckBox id="idInput4" ></CheckBox>
+
+    <Button id="idBtn" type="Accept" press="onClick" text="Display input data"></Button>
+</form:SimpleForm>
+
+
+
+</mvc:View>

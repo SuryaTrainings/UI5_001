@@ -1,0 +1,15 @@
+<mvc:View xmlns:form="sap.ui.layout.form"  
+          xmlns:mvc = "sap.ui.core.mvc"
+          xmlns = "sap.m"  
+          controllerName="root.controller.main">
+
+
+<form:SimpleForm title="Student details" id="idForm">
+    <Label id="idLabel" text="Student name"></Label>
+    <Input id="idInput" width="50%" maxLength="60"></Input>
+    <Button id="idBtn" press="onClick" text="Display input data"></Button>
+</form:SimpleForm>
+
+
+
+</mvc:View>
