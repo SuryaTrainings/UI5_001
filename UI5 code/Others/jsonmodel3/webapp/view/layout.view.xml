@@ -22,6 +22,9 @@
     <Input id="idMarksInput" width="50%" maxLength="60"></Input>
 
     <Button id="idBtn" press="onClick" text="Display input data"></Button>
+
+    
+    <Button id="idShowBtn" press="onShow" text="Display changed data"></Button>
 </form:SimpleForm>
 
 

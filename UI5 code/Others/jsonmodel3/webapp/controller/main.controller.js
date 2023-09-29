@@ -1,35 +1,35 @@
 sap.ui.define([
-   'root/controller/baseController',
-   'root/models/model'
-    ], function (oController, oModel) {
+    'root/controller/baseController',
+    'root/models/model'
+], function (oController, oModel) {
     'use strict';
-        debugger;
+    debugger;
     console.log("Basic controller loaded successfully");
 
     return oController.extend("root.controller.main", {
 
-        onInit:function(){
-            var oModelData = oModel.createJsonModel('./models/mockData/studentdata.json'); 
+        onInit: function () {
+            var oModelData = oModel.createJsonModel('./models/mockData/studentdata.json');
 
             //3 - set data at application 
             this.oCore.setModel(oModelData);
             // sap.ui.getCore().setModel(oModel);
-            
+
             //3rd way displaying data
             this.getView().byId("idClassInput").bindValue("/studentData/class");
             this.getView().byId("idMarksInput").bindProperty("value", "/studentData/marks");
         },
 
-        onBeforeRendering: function(){
+        onBeforeRendering: function () {
             // this.getView().byId("idInput").setValue(this.x);
         },
 
-        onAfterRendering: function(){
-        //     debugger;
-        //    $(this.getView().byId("idBtn")).fadeOut(5000).fadeIn(5000);
+        onAfterRendering: function () {
+            //     debugger;
+            //    $(this.getView().byId("idBtn")).fadeOut(5000).fadeIn(5000);
         },
 
-         onExit: function(){
+        onExit: function () {
 
         },
         onPress: function () {
@@ -38,51 +38,27 @@ sap.ui.define([
 
             // console.log("Method loaded successfully");
         },
-        onClick: function(oEvent){
+        onClick: function (oEvent) {
 
-            // Hardcoded date 
-            // this.getView().byId("idIdInput").setValue("ID0001"),
-            // this.getView().byId("idNameInput").setValue("Mr A"),
-            // this.getView().byId("idClassInput").setValue("10"),
-            // this.getView().byId("idMarksInput").setValue("738")
+            var oModelData = this.oCore.getModel();
+            var oJsonData = oModelData.getProperty("/studentData");
+            console.log(oJsonData);
+            oModelData.setProperty(
+                "/studentData", {
+                "id": "ID9999",
+                "name": "Mr India",
+                "class": "12",
+                "marks": "980"
+            }
+            )
 
-            // debugger;
-            // alert(this.x);
-            // Dynamic data
-            //1 - create empty object
-
-
-            //1 - Testing
-            // alert("On click event fired");
-
-            // //2 - Your own logic - cureent screen 
-            // debugger;
-            // //Get object refernce - document
-            // //var oDcouemnt = sap.ui.getCore(); - Local (current controller)--> Global (baseController)
-            // var oDocument = this.oCore;
-            // var oInp = oDocument.byId("idMain--idInput"); //Viewname--propertyid
-            // var oValue = oInp.getValue();
-            // alert(oValue);
-
-            // //3 - way - current screen
-            // // var oDocument = this.getView();
-            // // var oInp = oDocument.byId("idInput"); //Viewname--propertyid
-            // // var oValue = oInp.getValue();
-            // // alert(oValue);
-
-            // //4 - otherway of wrting 
-            // // alert( this.getView().byId("idInput").getValue() );
-
-            // sap.ui.require(["sap/m/MessageToast"],function(oMessageToast){
-            //     oMessageToast.show(oValue);
-
-            // });
-
-            // sap.ui.require(["sap/m/MessageBox"],function(oMessageBox){
-            //     oMessageBox.success(oValue);
-
-            // });
-
+        },
+        onShow: function () {
+            debugger;
+            var oModelData = this.oCore.getModel();
+            var oJsonData = oModelData.getProperty("/studentData");
+            console.log(oJsonData);
+            debugger;
         }
     });
 });
