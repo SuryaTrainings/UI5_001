@@ -1,0 +1,70 @@
+<mvc:View   xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.view1">
+<Table id="idtable" alternateRowColors="true">
+<headerToolbar>
+	<OverflowToolbar>
+<Title text="CandidateNames"></Title>
+	</OverflowToolbar>
+</headerToolbar>
+
+<columns>
+
+<Column>
+<Text text="FirstName"></Text>
+</Column>
+
+<Column>
+<Text text="LastName"></Text>
+</Column>
+
+<Column>
+<Text text="City"></Text>
+</Column>
+</columns>
+
+<items>
+<ColumnListItem >
+<cells>
+<Text text="Likhitha"></Text>
+<Text text="Goud"></Text>
+<Text text="AndhraPradesh"></Text>
+</cells>
+</ColumnListItem>
+
+<ColumnListItem >
+<cells>
+<Text text="Lohitha"></Text>
+<Text text="Choudary"></Text>
+<Text text="Hyderabad"></Text>
+</cells>
+</ColumnListItem>
+
+<ColumnListItem >
+<cells>
+<Text text="Subhash"></Text>
+<Text text="Goud"></Text>
+<Text text="Pune"></Text>
+</cells>
+</ColumnListItem>
+
+
+<ColumnListItem >
+<cells>
+<Text text="Vikram"></Text>
+<Text text="Rathod"></Text>
+<Text text="Delhi"></Text>
+</cells>
+</ColumnListItem>
+
+
+</items>
+
+</Table>
+
+
+
+
+
+
+</mvc:View>

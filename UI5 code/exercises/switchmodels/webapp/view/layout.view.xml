@@ -1,0 +1,30 @@
+<mvc:View xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.main">
+
+
+<form:SimpleForm title="studentDetails" id="idForm">
+<form:content>
+
+<Label id="idName" text="StudentName"></Label>
+<Input id="idSname" maxLength="60" width="50%" value="{s1>/studentData/name}"></Input>
+
+<Label id="id1label" text="StudentId"></Label>
+<Input id="idSid" maxLength="60" width="50%" value="{path:'s1>/studentData/id'}" ></Input>
+
+<Label id="idClass" text="StudentClass"></Label>
+<Input id="idSclass" maxLength="60" width="50%" ></Input>
+
+<Label id="idMarks" text="StudentMarks"></Label>
+<Input id="idsmarks" maxLength="60" width="50%" ></Input>
+
+<Label id="idstatus" text="Status"></Label>
+<Input id="idStatus" maxLength="60" width="50%" 
+value='{= ${s1>/studentData/marks}>=500 ? "Pass" : "Fail"}' ></Input>
+
+<Button id="idbtn" press="onClick" text="SwitchData" ></Button>
+
+</form:content>
+
+</form:SimpleForm>
+</mvc:View>
