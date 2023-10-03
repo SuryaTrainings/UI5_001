@@ -1,0 +1,35 @@
+<mvc:View xmlns:form="sap.ui.layout.form"  
+          xmlns:mvc = "sap.ui.core.mvc"
+          xmlns = "sap.m"  
+          controllerName="root.controller.main">
+
+
+<form:SimpleForm title="Student details" id="idForm">
+    
+    <Label id="idIdLabel" text="Student id"></Label>
+    <Input id="idIdInput" value="{/studentData/id}" width="50%" maxLength="60"></Input>
+
+    
+    <Label id="idNameLabel" text="Student name"></Label>
+    <Input id="idNameInput" value="{ path : '/studentData/name' }" width="50%" maxLength="60"></Input>
+
+    
+    <Label id="idClassLabel" text="Student class"></Label>
+    <Input id="idClassInput" width="50%" maxLength="60"></Input>
+
+    
+    <Label id="idMarksLabel" text="Student marks"></Label>
+    <Input id="idMarksInput" width="50%" maxLength="60"></Input>
+
+        
+    <Label id="idResultLabel" text="Result"></Label>
+    <Input id="idResultInput" width="50%" maxLength="60"
+    value ="{= ${/studentData/marks}>=500 ? 'Pass' : 'Fail'  }"
+    ></Input>
+
+    <Button id="idBtn" press="onClick" text="Display input data"></Button>
+</form:SimpleForm>
+
+
+
+</mvc:View>
