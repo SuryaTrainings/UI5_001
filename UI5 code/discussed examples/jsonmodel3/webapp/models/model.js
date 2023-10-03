@@ -8,7 +8,7 @@ sap.ui.define([
             var oModel = new oJSONModel;
             
             // oModel.setData();
-            oModel.loadData(filepath);
+            oModel.loadData(filepath);  
             return oModel;    
         }
       
