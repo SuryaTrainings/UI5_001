@@ -45,17 +45,21 @@ sap.ui.define([
         },
         onClick: function (oEvent) {
 
-            var oModelData = this.oCore.getModel();
-            var oJsonData = oModelData.getProperty("/studentData");
-            console.log(oJsonData);
-            oModelData.setProperty(
-                "/studentData", {
-                "id": "ID9999",
-                "name": "Mr India",
-                "class": "12",
-                "marks": "980"
-            }
-            )
+            // var oModelData = this.oCore.getModel();
+            // var oJsonData = oModelData.getProperty("/studentData");
+            // console.log(oJsonData);
+            // oModelData.setProperty(
+            //     "/studentData", {
+            //     "id": "ID9999",
+            //     "name": "Mr India",
+            //     "class": "12",
+            //     "marks": "980"
+            // }
+
+            var oDefaultModel = this.oCore.getModel();
+            var oNamedModel = this.oCore.getModel("s2");
+            this.oCore.setModel(oNamedModel);
+            this.oCore.setModel(oDefaultModel,"s2");
 
         },
         onShow: function () {
