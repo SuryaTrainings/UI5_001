@@ -1,0 +1,50 @@
+    {
+        "studentData": {
+            "id": "ID0001",
+            "name": "Mr ABC",
+            "class": "10",
+            "marks": "670"
+        },
+        "studentRecords": [
+            {
+                "id": "ID0001",
+                "name": "Mr ABC",
+                "class": "10",
+                "marks": "300",
+                "gender": "M",
+                "rating":4
+            },
+            {
+                "id": "ID0002",
+                "name": "Mr BCD",
+                "class": "10",
+                "marks": "400",
+                "gender": "F",
+                "rating":2
+            },
+            {
+                "id": "ID0003",
+                "name": "Mr CDE",
+                "class": "10",
+                "marks": "501",
+                "gender": "M",
+                "rating":1
+            },
+            {
+                "id": "ID0004",
+                "name": "Mr DEF",
+                "class": "10",
+                "marks": "601",
+                "gender": "F",
+                "rating":3
+            },
+            {
+                "id": "ID0005",
+                "name": "Mr GHI",
+                "class": "10",
+                "marks": "670",
+                "gender": "F",
+                "rating":5
+            }
+        ]
+    }
