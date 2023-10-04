@@ -1,0 +1,46 @@
+{
+    "studentData": {
+        "id": "ID9999",
+        "name": "Mr Raj",
+        "class": "9",
+        "marks": "970",
+        "gender": "M"
+    },
+    "studentRecords": [
+        {
+            "id": "10001",
+            "name": "Mr A",
+            "class": "10",
+            "marks": "300",
+            "gender": "M"
+        },
+        {
+            "id": "10002",
+            "name": "Mr B",
+            "class": "10",
+            "marks": "400",
+            "gender": "M"
+        },
+        {
+            "id": "10003",
+            "name": "Mr C",
+            "class": "10",
+            "marks": "501",
+            "gender": "M"
+        },
+        {
+            "id": "10004",
+            "name": "Mr D",
+            "class": "10",
+            "marks": "700",
+            "gender": "M"
+        },
+        {
+            "id": "10005",
+            "name": "Mr E",
+            "class": "10",
+            "marks": "900",
+            "gender": "M"
+        }
+    ]
+}
