@@ -1,0 +1,71 @@
+{
+    "studentData": {
+        "id": "ID9999",
+        "name": "Mr Raj",
+        "class": "9",
+        "marks": "970",
+        "gender": "M"
+    },
+    "studentRecords": [
+        {
+            "id": "10001",
+            "name": "Mr A",
+            "class": "10",
+            "marks": "300",
+            "gender": "m",
+            "rating":1,
+            "promotion":true,
+            "grade":"F",
+            "fee":10000,
+            "currency":"INR"
+        },
+        {
+            "id": "10002",
+            "name": "Mr B",
+            "class": "10",
+            "marks": "400",
+            "gender": "m",
+            "rating":2,
+            "promotion":false,
+            "grade":"F",
+            "fee":199000,
+            "currency":"INR"
+        },
+        {
+            "id": "10003",
+            "name": "Mr C",
+            "class": "10",
+            "marks": "501",
+            "gender": "f",
+            "rating":3,
+            "promotion":true,
+            "grade":"B",
+            "fee":110000,
+            "currency":"INR"
+        },
+        {
+            "id": "10004",
+            "name": "Mr D",
+            "class": "10",
+            "marks": "700",
+            "gender": "f",
+            "rating":4,
+            "promotion":false,
+            "grade":"A",
+            "fee":100,
+            "currency":"USD"
+        },
+        {
+            "id": "10005",
+            "name": "Mr E",
+            "class": "10",
+            "marks": "900",
+            "gender": "f",
+            "rating":5,
+            "promotion":true,
+            "grade":"A+",
+            "fee":25000,
+            "currency":"INR"
+        }
+    ]
+}
