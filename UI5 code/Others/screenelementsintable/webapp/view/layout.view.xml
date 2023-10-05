@@ -1,0 +1,194 @@
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="root.controller.main"
+>    <t:Table rows="{/studentRecords}" alternateRowColors="true"
+    visibleRowCount="5" selectionMode="Single" enableCustomFilter="true"
+    rowSelectionChange="onRowSelectionChange">
+        <t:columns>
+            <t:Column label="Student ID">
+                <t:template>
+                    <Text text="{id}" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Student name">
+                <t:template>
+                    <Text text="{path: 'name', formatter:'.formatterMethods.getConvertedName' }" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Student class">
+                <t:template>
+                    <Text text="{class}" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Student marks">
+                <t:template>
+                    <Text text="{marks}" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Student gender">
+                <t:template>
+                    <!-- <core:Icon src="sap-icon://account" /> -->
+                    <Image src="{gender}" width="20px" height="20px"/>
+                </t:template>
+            </t:Column>
+            <t:Column label="Promoted">
+                <t:template>
+                    <CheckBox selected="{promoted}" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Rating">
+                <t:template>
+                    <RatingIndicator value="{rating}" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Fee paid">
+                <t:template>
+                     <Text text="{parts:[ {path:'fee'} , {path:'currency'} ],
+                                    formatter: '.formatterMethods.getFormattedAmount' }" />
+                </t:template>
+            </t:Column>
+            <t:Column label="Grade" >
+                <t:template>
+                    <Select selectedKey="{grade}">
+                        <items>
+                            <core:Item key="A+" text="90% marks"></core:Item>
+                            <core:Item key="A" text="70% marks"></core:Item>
+                            <core:Item key="B" text="60% marks"></core:Item>
+                            <core:Item key="C" text="50% marks"></core:Item>
+                            <core:Item key="D" text="35% marks"></core:Item>
+                            <core:Item key="F" text="Fail"></core:Item>
+                        </items>
+                    </Select>
+                </t:template>
+            </t:Column>
+        </t:columns>
+    </t:Table>
+
+<form:SimpleForm
+        title="Student details from above table"
+        id="idForm2"
+    >
+        <Label
+            id="idIdLabel2"
+            text="Student id"
+        />
+        <Input
+            id="idIdInput2"
+            value="{id}"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idNameLabel2"
+            text="Student name"
+        />
+        <Input
+            id="idNameInput2"
+            value="{name}"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idClassLabel2"
+            text="Student class"
+        />
+        <Input
+            id="idClassInput2"
+            width="50%"
+            maxLength="60"
+            value="{class}"
+        />
+
+        <Label
+            id="idMarksLabel2"
+            text="Student marks"
+        />
+        <Input
+            id="idMarksInput2"
+            width="50%"
+            maxLength="60"
+            value="{marks}"
+        />
+
+        <Label
+            id="idResultLabel2"
+            text="Result"
+        />
+        <Input
+            id="idResultInput2"
+            width="50%"
+            maxLength="60"
+            value="{= ${marks}>=500 ? 'Pass' : 'Fail'  }"
+        />
+
+    </form:SimpleForm>    
+
+    <form:SimpleForm
+        title="Student details from data set directly "
+        id="idForm"
+    >
+        <Label
+            id="idIdLabel"
+            text="Student id"
+        />
+        <Input
+            id="idIdInput"
+            value="{/studentData/id}"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idNameLabel"
+            text="Student name"
+        />
+        <Input
+            id="idNameInput"
+            value="{ path : '/studentData/name' }"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idClassLabel"
+            text="Student class"
+        />
+        <Input
+            id="idClassInput"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idMarksLabel"
+            text="Student marks"
+        />
+        <Input
+            id="idMarksInput"
+            width="50%"
+            maxLength="60"
+        />
+
+        <Label
+            id="idResultLabel"
+            text="Result"
+        />
+        <Input
+            id="idResultInput"
+            width="50%"
+            maxLength="60"
+            value="{= ${/studentData/marks}>=500 ? 'Pass' : 'Fail'  }"
+        />
+
+        <Button
+            id="idBtn"
+            press="onClick"
+            text="Display input data"
+        />
+    </form:SimpleForm>
+</mvc:View>

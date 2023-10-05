@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.main">
+
+<Input id="idinput" maxLength="60" width="50%" ></Input>
+<Button id="idbtn" press="onClick" text="DisplayInputText" ></Button>
+
+</mvc:View>

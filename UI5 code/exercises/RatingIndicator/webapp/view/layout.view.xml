@@ -1,0 +1,124 @@
+<mvc:View xmlns:table="sap.ui.table" xmlns:form="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.main">
+
+<table:Table rows="{/StudentInfo}" alternateRowColors="true" visibleRowCount="5"
+ selectionMode="MultiToggle" rowSelectionChange=".onRowSelectionChange">
+<table:columns>
+
+<table:Column >
+<Label text="StudentName"></Label>
+<table:template>
+<Text text="{name}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="StudentId"></Label>
+<table:template>
+<Text text="{id}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="StudentClass"></Label>
+<table:template>
+<Text text="{class}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="StudentMarks"></Label>
+<table:template>
+<Text text="{marks}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="Gender"></Label>
+<table:template>
+<Text text="{gender}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="RatingIndicator"></Label>
+<table:template>
+<RatingIndicator value="{rating}"></RatingIndicator>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="Amount"></Label>
+<table:template>
+<Text text="{amount}{currency}"></Text>
+</table:template>
+</table:Column>
+
+
+
+
+</table:columns>
+
+</table:Table>
+
+
+<form:SimpleForm title="studentDetails from above table" id="idForm2">
+<form:content>
+
+<Label id="id1Name" text="StudentName"></Label>
+<Input id="id1Sname" maxLength="60" width="50%" value="{name}"></Input>
+
+<Label id="id2label" text="StudentId"></Label>
+<Input id="id2Sid" maxLength="60" width="50%" value="{id}" ></Input>
+
+<Label id="id3Class" text="StudentClass"></Label>
+<Input id="id3Sclass" maxLength="60" width="50%" value="{class}" ></Input>
+
+<Label id="id4Marks" text="StudentMarks"></Label>
+<Input id="id4smarks" maxLength="60" width="50%" value="{marks}"></Input>
+
+<Label id="idgender" text="Gender"></Label>
+<Input id="idGender" maxLength="60" width="50%" value='{= ${gender}==="M" ? "Male" : "Female"}'></Input>
+
+<Label id="idRating" text="RatingIndicator"></Label>
+<Input id="idRating1" maxLength="60" width="50%" value="{rating}"></Input>
+
+
+<Label id="id5status" text="Status"></Label>
+<Input id="id5Status" maxLength="60" width="50%" value='{= ${marks}>=500 ? "Pass" : "Fail"}'></Input>
+
+</form:content>
+
+</form:SimpleForm>
+
+
+
+
+
+
+<form:SimpleForm title="studentDetails" id="idForm">
+<form:content>
+
+<Label id="idName" text="StudentName"></Label>
+<Input id="idSname" maxLength="60" width="50%" value="{s1>/studentData/name}"></Input>
+
+<Label id="id1label" text="StudentId"></Label>
+<Input id="idSid" maxLength="60" width="50%" value="{path:'s1>/studentData/id'}" ></Input>
+
+<Label id="idClass" text="StudentClass"></Label>
+<Input id="idSclass" maxLength="60" width="50%" ></Input>
+
+<Label id="idMarks" text="StudentMarks"></Label>
+<Input id="idsmarks" maxLength="60" width="50%" ></Input>
+
+<Label id="idstatus" text="Status"></Label>
+<Input id="idStatus" maxLength="60" width="50%" 
+value='{= ${s1>/studentData/marks}>=500 ? "Pass" : "Fail"}' ></Input>
+
+<Button id="idbtn" press="onClick" text="SwitchData" ></Button>
+
+</form:content>
+
+</form:SimpleForm>
+</mvc:View>
