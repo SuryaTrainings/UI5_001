@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>	
+    <studentData>
+		<id>ID9999</id>
+		<name>Mr Raj</name>
+		<class>9</class>
+		<marks>970</marks>
+		<gender>M</gender>
+	</studentData>
+	<studentRecords>
+        <row>
+		<id>10001</id>
+		<name>Mr A</name>
+		<class>10</class>
+		<marks>300</marks>
+		<gender>m</gender>
+		<rating>1</rating>
+		<promotion></promotion>
+		<grade>F</grade>
+		<fee>10000</fee>
+		<currency>INR</currency>
+	</row>
+	<row>
+		<id>10002</id>
+		<name>Mr B</name>
+		<class>10</class>
+		<marks>400</marks>
+		<gender>m</gender>
+		<rating>2</rating>
+		<promotion></promotion>
+		<grade>F</grade>
+		<fee>199000</fee>
+		<currency>INR</currency>
+	</row>
+	<row>
+		<id>10003</id>
+		<name>Mr C</name>
+		<class>10</class>
+		<marks>501</marks>
+		<gender>f</gender>
+		<rating>3</rating>
+		<promotion></promotion>
+		<grade>B</grade>
+		<fee>110000</fee>
+		<currency>INR</currency>
+	</row>
+	<row>
+		<id>10004</id>
+		<name>Mr D</name>
+		<class>10</class>
+		<marks>700</marks>
+		<gender>f</gender>
+		<rating>4</rating>
+		<promotion></promotion>
+		<grade>A</grade>
+		<fee>100</fee>
+		<currency>USD</currency>
+	</row>
+	<row>
+		<id>10005</id>
+		<name>Mr E</name>
+		<class>10</class>
+		<marks>900</marks>
+		<gender>f</gender>
+		<rating>5</rating>
+		<promotion></promotion>
+		<grade>A+</grade>
+		<fee>25000</fee>
+		<currency>INR</currency>
+        </row>
+	</studentRecords>
+</data>
