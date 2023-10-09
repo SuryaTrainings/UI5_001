@@ -1,0 +1,38 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" controllerName="root.controller.main">
+
+    <form:SimpleForm id="idForm" title="Student Details">
+        <form:content>
+            <VBox id="idVbox">
+
+                <Label id="idIdLbl" text="Student ID"></Label>
+                <Input id="idIdInp" value="{/studentData/id}" width="50%"></Input>
+
+                <Label id="idNameLbl" text="Student Name"></Label>
+                <Input id="idNameInp" value="{ path : '/studentData/name' }" width="50%"></Input>
+
+                <Label id="idClassLbl" text="Student Class"></Label>
+                <Input id="idClassInp" width="50%"></Input>
+
+                <Label id="idMarksLbl" text="Student Marks"></Label>
+                <Input id="idMarksInp" width="50%"></Input>
+
+                <Panel headerText="Please select one below" width="50%">
+                    <RadioButtonGroup id="idRbtnGrp">
+                        <RadioButton id="idRbtn1" text="1"></RadioButton>
+                        <RadioButton id="idRbtn2" text="2"></RadioButton>
+                        <RadioButton id="idRbtn3" text="3"></RadioButton>
+                    </RadioButtonGroup>
+                </Panel>
+
+                <HBox id="idHbox">
+                    <Button id="idBtn" text="Get Data" press="onPress"></Button>
+                </HBox>
+
+            </VBox>
+
+        </form:content>
+
+    </form:SimpleForm>
+</mvc:View>
