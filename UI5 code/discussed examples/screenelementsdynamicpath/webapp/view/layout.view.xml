@@ -52,14 +52,15 @@
             </t:Column>
             <t:Column label="Student grade">
                 <t:template>
-                <Select selectedKey="{grade}">
-                    <items>
-                        <core:Item key="A+" text="Distinction"></core:Item>
+                <Select selectedKey="{/grade}" 
+                        items = "{ path: '/studentGrades'}">
+                        <core:Item key="{grade}" text="{desc}"></core:Item>
+                    <!-- <items >
                         <core:Item key="A" text="First class"></core:Item>
                         <core:Item key="B" text="Second class"></core:Item>
                         <core:Item key="C" text="Third class"></core:Item>
                         <core:Item key="F" text="Fail"></core:Item>
-                    </items>
+                    </items> -->
                 </Select>
                 </t:template>
             </t:Column>
