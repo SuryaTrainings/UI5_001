@@ -1,0 +1,129 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" 
+xmlns:form="sap.ui.layout.form" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="root.controller.main">
+
+ <table:Table rows="{/StudentInfo}" alternateRowColors="true" visibleRowCount="5"
+ selectionMode="MultiToggle" rowSelectionChange=".onRowSelectionChange">
+ <table:columns>
+
+<table:Column>
+<Label text="{i18n>XTIT_STUDENT_NAME}"></Label>
+<table:template>
+<Text  text="{path:'name', formatter:'.FormatterMethod.toCapitalLetters'}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column>
+<Label text="{i18n>XTIT_STUDENT_ID}"></Label>
+<table:template>
+<Text text="{id}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_CLASS}"></Label>
+<table:template>
+<Text text="{class}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_MARKS}"></Label>
+<table:template>
+<Text text="{marks}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_GENDER}"></Label>
+<table:template>
+<core:Icon src='{= ${gender}==="M" ? "sap-icon://male" : "sap-icon://female"}'></core:Icon>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_RATINGINDICATOR}"></Label>
+<table:template>
+<RatingIndicator value="{rating}"></RatingIndicator>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_AMOUNT}"></Label>
+<table:template>
+ <Text text= " {parts:[{path:'amount'} , {path:'currency'} ], formatter:'.FormatterMethod.toFormattedAmount'}"></Text>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_CHECKBOX}"></Label>
+<table:template>
+<CheckBox selected="{promotion}"></CheckBox>
+</table:template>
+</table:Column>
+
+<table:Column >
+<Label text="{i18n>XTIT_STUDENT_GRADE}"></Label>
+<table:template>
+<Select selectedKey="{grade}">
+<items>
+<core:Item key="A" text="Destension"></core:Item>
+<core:Item key="B" text="Pass"></core:Item>
+<core:Item key="C" text="Fail"></core:Item>
+<core:Item key="D" text="Pass"></core:Item>
+
+</items>
+</Select>
+</table:template>
+</table:Column>
+</table:columns>
+
+</table:Table> 
+<form:SimpleForm title="studentDetails from above table" id="idForm2">
+<form:content>
+<Label id="id1Name" text="{i18n>XFLD_STUDENT_NAME}"></Label>
+<Input id="id1Sname" maxLength="60" width="50%" value="{name}"></Input>
+
+<Label id="id2label" text="{i18n>XFLD_STUDENT_ID}"></Label>
+<Input id="id2Sid" maxLength="60" width="50%" value="{id}" ></Input>
+
+<Label id="id3Class" text="{i18n>XFLD_STUDENT_CLASS}"></Label>
+<Input id="id3Sclass" maxLength="60" width="50%" value="{class}" ></Input>
+
+<Label id="id4Marks" text="{i18n>XFLD_STUDENT_MARKS}"></Label>
+<Input id="id4smarks" maxLength="60" width="50%" value="{marks}"></Input>
+
+<Label id="id5status" text="{i18n>XFLD_STUDENT_STATUS}"></Label>
+<Input id="id5Status" maxLength="60" width="50%" value='{= ${marks}>=500 ? "Pass" : "Fail"}'></Input>
+
+</form:content> 
+
+</form:SimpleForm>
+
+<form:SimpleForm title="studentDetails" id="idForm">
+<form:content>
+
+<Label id="idName" text="{i18n>XFLD_STUDENT_NAME}"></Label>
+<Input id="idSname" maxLength="60" width="50%" value="{s1>/studentData/name}"></Input>
+
+<Label id="id1label" text="{i18n>XFLD_STUDENT_ID}"></Label>
+<Input id="idSid" maxLength="60" width="50%" value="{path:'s1>/studentData/id'}"></Input>
+
+<Label id="idClass" text="{i18n>XFLD_STUDENT_CLASS}"></Label>
+<Input id="idSclass" maxLength="60" width="50%" ></Input>
+
+<Label id="idMarks" text="{i18n>XFLD_STUDENT_MARKS}"></Label>
+<Input id="idsmarks" maxLength="60" width="50%" ></Input>
+
+<Label id="idstatus" text="{i18n>XFLD_STUDENT_STATUS}"></Label>
+<Input id="idStatus" maxLength="60" width="50%" 
+value='{= ${s1>/studentData/marks}>=500 ? "Pass" : "Fail"}'></Input>
+
+<Button id="idbtn" press="onClick" text="{i18n>XBUT_SWITCH_DATA}"></Button>
+
+</form:content>
+
+</form:SimpleForm> 
+</mvc:View>

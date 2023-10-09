@@ -1,0 +1,107 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="root.controller.view1"
+    xmlns:table="sap.ui.table"
+>
+    <Label text="StudentName" />
+
+    <table:Table
+        rows="{/StudentRecords/row}"
+        alternateRowColors="true"
+        visibleRowCount="5"
+        selectionMode="MultiToggle"
+    >
+        <table:columns>
+            <table:Column>
+                <Label text="StudentName" />
+                <table:template>
+                    <Text text="{name}" />
+                </table:template>
+            </table:Column>
+
+            <table:Column>
+                <Label text="StudentId" />
+                <table:template>
+                    <Text text="{id}" />
+                </table:template>
+            </table:Column>
+
+            <table:Column>
+                <Label text="StudentClass" />
+                <table:template>
+                    <Text text="{class}" />
+                </table:template>
+            </table:Column>
+
+            <table:Column>
+                <Label text="StudentMarks" />
+                <table:template>
+                    <Text text="{marks}" />
+                </table:template>
+            </table:Column>
+
+            <table:Column>
+                <Label text="Gender" />
+                <table:template>
+                    <Text text="{gender}" />
+                </table:template>
+            </table:Column>
+        </table:columns>
+    </table:Table>
+
+    <!-- <form:SimpleForm
+        title="studentDetails"
+        id="idForm"
+    >
+        <form:content>
+            <Label
+                id="idName"
+                text="StudentName"
+            />
+            <Input
+                id="idSname"
+                maxLength="60"
+                width="50%"
+                value="{/StudentInfo/name}"
+            />
+
+            <Label
+                id="id1label"
+                text="StudentId"
+            />
+            <Input
+                id="idSid"
+                maxLength="60"
+                width="50%"
+                value="{path:'/StudentInfo/id'}"
+            />
+
+            <Label
+                id="idClass"
+                text="StudentClass"
+            />
+            <Input
+                id="idSclass"
+                maxLength="60"
+                width="50%"
+            />
+
+            <Label
+                id="idMarks"
+                text="StudentMarks"
+            />
+            <Input
+                id="idsmarks"
+                maxLength="60"
+                width="50%"
+            />
+
+            <Button
+                id="idbtn"
+                press="onClick"
+                text="DisplayInputText"
+            />
+        </form:content>
+    </form:SimpleForm> -->
+</mvc:View>
