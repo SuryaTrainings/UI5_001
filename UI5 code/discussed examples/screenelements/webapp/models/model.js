@@ -8,7 +8,7 @@ sap.ui.define([
             var oModel = new oJSONModel;
             // oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
             // oModel.setData();
-            oModel.loadData(filepath);  
+            oModel.loadData(filepath, null, false);  
             return oModel;    
         }
       
