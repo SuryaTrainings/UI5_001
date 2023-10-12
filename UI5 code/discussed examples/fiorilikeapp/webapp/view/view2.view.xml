@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          controllerName="st.b33.simpleApp.controller.view2"  
+>
+<Page title="Screen - 2 / view - 2">
+<Button text="Go back to screen - 1 / view - 1" press="onBack"></Button>
+</Page>
+</mvc:View>
