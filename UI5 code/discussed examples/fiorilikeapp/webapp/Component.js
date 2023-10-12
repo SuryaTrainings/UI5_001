@@ -10,12 +10,12 @@ sap.ui.define([
         },
         //2 - init ( key ) - Prototype 
         init:function(){
-        sap.ui.core.UIComponent.prototype.init.apply(this);
+            sap.ui.core.UIComponent.prototype.init.apply(this);
         },
         //3 - Load our own data 
         createContent: function(){
             var oAppView = new sap.ui.view("idMain",{
-                viewName: "st.b33.simpleApp.view.layout",
+                viewName: "st.b33.simpleApp.view.App",
                 type: sap.ui.core.mvc.ViewType.XML
             });
 

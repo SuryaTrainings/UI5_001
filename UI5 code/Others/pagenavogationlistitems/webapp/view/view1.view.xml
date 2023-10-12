@@ -1,0 +1,52 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view1">
+    <Page title="Screen 1 / View 1">
+        <headerContent>
+            <Button icon="sap-icon://action" press="onNext"></Button>
+        </headerContent>
+        <SearchField ></SearchField>
+        <List id="idList">
+            <items>
+                <DisplayListItem label="SAP UI5" value="Useful for Custom UI App"></DisplayListItem>
+
+                <StandardListItem title="SAP FIORI" description="Ready to use Apps" icon="sap-icon://bbyd-dashboard"></StandardListItem>
+                <InputListItem>
+                    <content>
+                        <!-- <Label text="How many FIORI apps to enable !"></Label>
+            <Input width="20%"></Input> -->
+
+                        <!-- <VBox >
+                            <Label text="How many FIORI apps to enable !"></Label>
+                            <Input width="20%"></Input>
+
+                        </VBox> -->
+                        
+                        <HBox >
+                            <Label class="sapUiSmallMarginTop" text="How many FIORI apps to enable !"></Label>
+                            <Input width="20%"></Input>
+
+                        </HBox>
+
+                    </content>
+                </InputListItem>
+
+                <ObjectListItem title="FIORI App count" 
+                intro="SAP Provided FIORI Apss so far - 16k plus apps" 
+                number="16987" numberUnit="Apps" icon="sap-icon://bbyd-dashboard"></ObjectListItem>
+
+                <CustomListItem >
+                <content>
+                <HBox >
+                <Label class="sapUiSmallMarginTop" text="Are you looking enable standard apps !"></Label>
+                <Switch ></Switch>
+                </HBox>
+                </content>
+                </CustomListItem>
+                <FeedListItem sender="SAP" text="How can I help you !" timestamp="Monday 10 Oct" 
+                icon="sap-icon://download-from-cloud"></FeedListItem>
+                <ActionListItem text="Place request now !"></ActionListItem>
+            </items>
+        </List>
+        <!-- <Button text="Go to Screen 2 / View 2" press="onNext"></Button> -->
+    </Page>
+</mvc:View>   

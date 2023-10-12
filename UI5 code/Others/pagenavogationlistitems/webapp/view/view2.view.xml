@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view2">
+    <Page title="Screen 2 / View 2"  showNavButton="true" navButtonPress="onBack">
+    </Page>
+</mvc:View>   
