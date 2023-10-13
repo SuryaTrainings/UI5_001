@@ -1,0 +1,44 @@
+<mvc:View xmlns:control="sap.gantt.control" xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view1">
+    <Page title="Screen - 1 / view - 1">
+        <!-- <Button text="Go to next screen - 2 / view - 2" press="onNext"></Button> -->
+        <headerContent>
+            <Button icon="sap-icon://forward" press="onNext"></Button>
+        </headerContent>
+        <SearchField ></SearchField>
+        <List >
+            <items>
+                <DisplayListItem label="UI5 Course" value="UI5 Course helps to design screens"></DisplayListItem>
+                <StandardListItem title="SAP FIORI" icon="sap-icon://activate"
+                 info="SAP FIROI is readymade apps for business purpose" description="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"></StandardListItem>
+                <InputListItem >
+                    <content>
+                        <HBox >
+                            <Label class="sapUiSmallMargin" text="How many apps to be activated"></Label>
+                            <Input ></Input>
+                        </HBox>
+                    </content>
+                </InputListItem>
+                <ObjectListItem  title="FIORI Apps avaliability" 
+                    intro="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"
+                    number="16987" numberUnit="Apps" icon="sap-icon://activate"></ObjectListItem>
+                    
+                <ObjectListItem  title="FIORI Apps avaliability" 
+                    intro="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"
+                    number="16987" numberUnit="Apps" icon="sap-icon://activate"></ObjectListItem>
+                <ObjectListItem  title="FIORI Apps avaliability" 
+                    intro="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"
+                    number="16987" numberUnit="Apps" icon="sap-icon://activate"></ObjectListItem>
+                <CustomListItem >
+                <content>
+                    <Label text="Really you want to enable FIORI apps!"></Label>
+                    <Switch ></Switch>
+                </content>
+                </CustomListItem>    
+                <ActionListItem text="Place order now !!">
+                </ActionListItem>
+
+            </items>
+        </List>
+    </Page>
+</mvc:View>

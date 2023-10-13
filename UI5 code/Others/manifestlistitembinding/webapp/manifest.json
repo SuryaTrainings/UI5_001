@@ -1,0 +1,51 @@
+{   
+    "_version": "1.59.0",
+    "sap.app": {
+        "id":"st.b33.simpleApp",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title":"{{appTitle}}",
+        "description":"{{appDescription}}",
+        "i18n":"i18n/i18n.properties"
+    },
+    "sap.ui":{
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "supportedThemes": ["sap_belize","sap_bluecrystal","sap_horizon_dark","sap_fiori_3_dark","sap_fiori_3"],
+        "technology": "UI5"
+
+    },
+    "sap.ui5":{
+        "dependencies": {
+            "minUI5Version": "1.100.0",
+            "libs": {
+                "sap.m":{ "minVersion":"1.90.0" },
+                "sap.ui.layout":{
+                    "minVersion":"1.90.0"
+                }
+            }
+        },
+        "models": {
+            "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri":"mockdata/fruits.json"
+            },
+            "i18n":{
+                "type":"sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+
+    }
+}

@@ -1,0 +1,51 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+controllerName="st.b33.SimpleApp.controller.view1">
+<Page title="screen1--view1" >
+<!-- <Button text="Go to screen2" press="onNext"></Button> -->
+<headerContent>
+<Button icon="sap-icon://forward" press="onNext"></Button>
+</headerContent>
+
+<SearchField ></SearchField>
+        <List >
+            <items>
+                <DisplayListItem label="UserName" value="Likhitha"></DisplayListItem>
+                <DisplayListItem label="Password" value="Likki123"></DisplayListItem>
+                <StandardListItem title="SAP FIORI" icon="sap-icon://activate"
+                 info="SAP FIROI is readymade apps for business purpose" description="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"></StandardListItem>
+                <InputListItem >
+                    <content>
+                        <HBox >
+                            <Label class="sapUiSmallMargin" text="Application should be added"></Label>
+                            <Input ></Input>
+                        </HBox>
+                    </content>
+                </InputListItem>
+                <ObjectListItem  title="FIORI Apps avaliability" 
+                    intro="SAP FIORI is Lauchpad, can access multiple application it support transactional and analytical apps"
+                    number="16987" numberUnit="Apps" icon="sap-icon://activate"></ObjectListItem>
+                    
+                <ObjectListItem  title="UI5 Apps avaliability" 
+                    intro="SAP UI5 is Framework,It can be developed by SAP" numberState="None"
+                    number="16987" numberUnit="Apps" icon="sap-icon://activate"></ObjectListItem>
+                
+                <CustomListItem >
+                <content>
+                    <Label text="Really you want to enable sapui5 apps!"></Label>
+                    <Switch ></Switch>
+                </content>
+                </CustomListItem>    
+                
+                <ActionListItem text="Place Order Now!!"></ActionListItem>
+
+            </items>
+        </List>
+
+
+</Page>
+
+
+
+
+</mvc:View>
