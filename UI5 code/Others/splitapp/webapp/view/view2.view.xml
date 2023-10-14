@@ -1,0 +1,15 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view2">
+    <Page title="Screen - 2 / view - 2" showNavButton="true" navButtonPress="onBack">
+        <!-- <Text text="{name}"></Text> -->
+
+        <ObjectHeader title="{name}" intro="{type}" number="{price}" numberUnit="{unit}" icon="{image}">
+            <statuses>
+                <ObjectStatus
+				text="{availability}"
+				state="{ path : 'availability',
+                         formatter : '.oFormatter.getStatus'}" />
+            </statuses>
+        </ObjectHeader>
+    </Page>
+</mvc:View>
