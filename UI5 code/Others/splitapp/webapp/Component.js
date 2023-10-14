@@ -32,8 +32,8 @@ sap.ui.define([
             });
 
             var oAppCon = oAppView.byId("idAppCon");
-            oAppCon.addPage(oAppView1);
-            oAppCon.addPage(oAppView2);
+            oAppCon.addMasterPage(oAppView1);
+            oAppCon.addDetailPage(oAppView2);
 
             return oAppView;
         },

@@ -2,9 +2,9 @@
           xmlns="sap.m"
           controllerName="st.b33.simpleApp.controller.App"  
 >
-<App id="idAppCon">
+<SplitApp id="idAppCon">
 
 
-</App>
+</SplitApp>
 
 </mvc:View>

@@ -71,7 +71,7 @@ sap.ui.define([
         //Get selected item path
         var oSelectedItemPath = oSelectedItem.getBindingContextPath();
         //Get view 2 object
-        var oView2 = this.getView().getParent().getPages()[1];
+        var oView2 = this.getView().getParent().getParent().getDetailPages()[0];
         //Bind data to view2
         oView2.bindElement(oSelectedItemPath);
             
