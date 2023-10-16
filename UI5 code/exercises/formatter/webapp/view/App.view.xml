@@ -1,0 +1,10 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+controllerName="st.b33.SimpleApp.controller.App"
+xmlns="sap.m">
+<App id="idApp">
+</App>
+
+
+
+
+</mvc:View>
