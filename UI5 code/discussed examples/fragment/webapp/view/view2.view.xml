@@ -1,0 +1,81 @@
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    controllerName="st.b33.simpleApp.controller.view2">
+    <Page title="Screen - 2 / view - 2" showNavButton="true" navButtonPress="onBack">
+        <ObjectHeader title="{name}" intro="{type}" number="{price}" numberUnit="{unit}" icon="{image}">
+            <statuses>
+                <ObjectStatus text="{availability}" state="{
+        path: 'availability',
+        formatter: '.oFormatter.getStatus'
+    }"></ObjectStatus>
+            </statuses>
+        </ObjectHeader>
+
+        <!-- Detailed item information -->
+
+        <IconTabBar >
+            <items>
+                <IconTabFilter icon="sap-icon://warning" iconColor="Positive">
+                        <core:Fragment fragmentName="st.b33.simpleApp.fragments.simpleForm" type="XML">
+                        </core:Fragment>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://supplier" iconColor="Critical">
+                    <Table id="idTable" items="{/Suppliers}">
+                        <columns>
+                            <Column >
+                                <header>
+                                    <Label text="Name of supplier"></Label>
+                                </header>
+                            </Column>
+                            <Column >
+                                <header>
+                                    <Label text="Contact Person"></Label>
+                                </header>
+                            </Column>
+                            <Column minScreenWidth="tablet" demandPopin="true">
+                                <header>
+                                    <Label text="City" ></Label>
+                                </header>
+                            </Column>
+                            <Column minScreenWidth="tablet"  demandPopin="true" >
+                                <header>
+                                    <Label text="Establised year"></Label>
+                                </header>
+                            </Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem >
+                                <cells>
+                                    <Text text="{name}"></Text>
+                                    <Text text="{contactPerson}"></Text>
+                                    <Text text="{city}"></Text>
+                                    <Text text="{sinceWhen}"></Text>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://home" iconColor="Marker">
+                    <HBox>
+                        <Select items="{/Cities}">
+                            <core:Item key="{CityName}" text="{CityName}">
+                            </core:Item>
+                        </Select>
+                        <ComboBox items="{/Cities}">
+                            <core:Item key="{CityName}" text="{CityName}">
+                            </core:Item>
+                        </ComboBox>
+                      </HBox>
+                        <MultiComboBox items="{/Cities}">
+                            <core:Item key="{CityName}" text="{CityName}">
+                            </core:Item>
+                        </MultiComboBox>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+
+    </Page>
+</mvc:View>
