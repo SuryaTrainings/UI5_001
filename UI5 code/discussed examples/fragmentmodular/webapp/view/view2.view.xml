@@ -1,0 +1,36 @@
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view2">
+    <Page title="Screen - 2 / view - 2" showNavButton="true" navButtonPress="onBack">
+        <ObjectHeader title="{name}" intro="{type}" number="{price}" numberUnit="{unit}" icon="{image}">
+            <statuses>
+                <ObjectStatus text="{availability}" state="{
+        path: 'availability',
+        formatter: '.oFormatter.getStatus'
+    }"></ObjectStatus>
+            </statuses>
+        </ObjectHeader>
+
+        <!-- Detailed item information -->
+
+        <IconTabBar >
+            <items>
+                <IconTabFilter icon="sap-icon://warning" iconColor="Positive" tooltip="Fruit information">
+                    <core:Fragment fragmentName="st.b33.simpleApp.fragments.simpleForm" type="XML">
+                    </core:Fragment>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://supplier" iconColor="Critical" tooltip="Fruit supplier information">
+
+                    <core:Fragment fragmentName="st.b33.simpleApp.fragments.supplier" type="XML">
+                    </core:Fragment>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://home" iconColor="Marker" tooltip="Currently avaliable in citys information">
+                    <core:Fragment fragmentName="st.b33.simpleApp.fragments.cities" type="XML">
+                    </core:Fragment>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+
+    </Page>
+</mvc:View>

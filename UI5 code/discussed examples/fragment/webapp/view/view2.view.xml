@@ -17,11 +17,11 @@
 
         <IconTabBar >
             <items>
-                <IconTabFilter icon="sap-icon://warning" iconColor="Positive">
+                <IconTabFilter icon="sap-icon://warning" iconColor="Positive" tooltip="Fruit information">
                         <core:Fragment fragmentName="st.b33.simpleApp.fragments.simpleForm" type="XML">
                         </core:Fragment>
                 </IconTabFilter>
-                <IconTabFilter icon="sap-icon://supplier" iconColor="Critical">
+                <IconTabFilter icon="sap-icon://supplier" iconColor="Critical" tooltip="Fruit supplier information">
                     <Table id="idTable" items="{/Suppliers}">
                         <columns>
                             <Column >
@@ -58,7 +58,7 @@
                         </items>
                     </Table>
                 </IconTabFilter>
-                <IconTabFilter icon="sap-icon://home" iconColor="Marker">
+                <IconTabFilter icon="sap-icon://home" iconColor="Marker" tooltip="Currently avaliable in citys information">
                     <HBox>
                         <Select items="{/Cities}">
                             <core:Item key="{CityName}" text="{CityName}">
