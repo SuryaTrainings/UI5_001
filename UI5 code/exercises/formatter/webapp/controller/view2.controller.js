@@ -4,6 +4,7 @@ sap.ui.define([
 ], function(BaseController,Formatter) {
    'use strict';
     return BaseController.extend("st.b33.SimpleApp.controller.view2",{
+        
 
         oFormatter:Formatter,
        

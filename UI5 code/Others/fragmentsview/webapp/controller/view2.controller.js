@@ -43,8 +43,45 @@ sap.ui.define([
                  this.supplierPopup.open();
             }
         },
-        onValueHelpRequest: function(){
+
+        citiesPopup: null,
+        oCitiField: null,
+
+        onPopupConfirm:function(oEvent){
+            var oWhichItemIsSelected = oEvent.getParameter("selectedItem");
+            var sLabel  = oWhichItemIsSelected.getLabel();
+
+            if(oEvent.getSource().getId().indexOf("Cities") != -1 ){
+            this.oCitiField.setValue(sLabel);
+        }
+        },
+        onValueHelpRequest: function(oEvent){
             alert("Value help triggered.");
+            debugger;
+            var that = this;
+            this.oCitiField = oEvent.getSource();
+            if(!this.citiesPopup){
+            Fragment.load({
+                id: 'Cities',
+                name: 'st.b33.simpleApp.fragments.popup',
+                controller: this
+                })
+                .then(function(oFragment){
+                    that.citiesPopup = oFragment; 
+                    that.citiesPopup.setTitle('Cities'); 
+                    that.citiesPopup.setMultiSelect(false);
+                    that.getView().addDependent(that.citiesPopup);
+                    that.citiesPopup.bindAggregation("items",{
+                        path: '/Cities',
+                        template: new sap.m.DisplayListItem({
+                            label: '{CityName}',
+                            value:'{State}'
+                        })
+                    });
+                    that.citiesPopup.open();
+            });}else{
+                 this.citiesPopup.open();
+            }
         }
 
     })

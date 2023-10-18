@@ -1,0 +1,38 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+controllerName="st.b33.SimpleApp.controller.view1"
+xmlns="sap.m">
+<Page title="screen1--view1" >
+<!-- <Button text="Go to screen2" press="onNext"></Button> -->
+<headerContent>
+<Button icon="sap-icon://forward" press="onNext"></Button>
+</headerContent>
+
+<SearchField search="onSearch" id="idSearch" liveChange="onliveChange"></SearchField>
+        <List id="idList" 
+        items= "{ path:'/Fruits',
+            sorter: { 
+            path : 'name',
+            descending: true
+            
+         }
+         }"  mode="SingleSelectMaster" delete="onDelete" selectionChange="onSelectionChange">
+            <items>
+                <ObjectListItem title="{name}"
+                intro="{type}"
+                number="{price}"
+                numberUnit="{unit}"
+                icon="{image}"
+                 >
+                
+                </ObjectListItem>
+
+            </items>
+        </List>
+
+
+</Page>
+
+
+
+
+</mvc:View>

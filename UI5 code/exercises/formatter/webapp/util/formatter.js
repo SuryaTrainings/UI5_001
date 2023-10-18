@@ -1,21 +1,20 @@
-sap.ui.define([], function () {
+sap.ui.define([], function (require, dependency) {
     'use strict';
     return {
-        getStatusInfo: function (oKey) {
+        getStatus: function(oKey) {
             debugger;
-            switch (oKey) {
+            switch(oKey) {
                 case 'Stock':
-
-                    return 'None'
-                    // return 'Success'
+                    // return 'None'
+                    return 'Success'
                     break;
                 case 'NoStock':
-                    return 'None'
-                    // return 'Error'
+                    // return 'None'
+                    return 'Error'
                     break;
                 case 'GoingtoComplete':
-                    return 'None'
-                    // return 'Warning'
+                    // return 'None'
+                    return 'Warning'
                     break;
                 default:
                     return 'None'

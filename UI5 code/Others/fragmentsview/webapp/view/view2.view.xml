@@ -14,20 +14,23 @@
 
         <!-- Detailed item information -->
 
-        <IconTabBar >
+        <IconTabBar selectedKey="1">
             <items>
                 <IconTabFilter icon="sap-icon://warning" iconColor="Positive" tooltip="Product Information"
-                    text="Product details" visible="true">
+                    text="Product details" visible="true"
+                    key="0">
                     <core:Fragment fragmentName="st.b33.simpleApp.fragments.simpleForm" type="XML">
                     </core:Fragment>
                 </IconTabFilter>
                 <IconTabFilter icon="sap-icon://supplier" iconColor="Critical" tooltip="Supplier Information"
-                    text="Supplier details">
+                    text="Supplier details"
+                    key="1">
                     <core:Fragment fragmentName="st.b33.simpleApp.fragments.supplier" type="XML">
                     </core:Fragment>
                 </IconTabFilter>
                 <IconTabFilter icon="sap-icon://home" iconColor="Marker" tooltip="Product avaliable in Cities"
-                    text="Product avaliable in">
+                    text="Product avaliable in" 
+                    key="2">
                     <core:Fragment fragmentName="st.b33.simpleApp.fragments.cities" type="XML">
                     </core:Fragment>
                 </IconTabFilter>
