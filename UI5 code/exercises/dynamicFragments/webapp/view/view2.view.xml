@@ -1,54 +1,45 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc"
-controllerName="st.b33.SimpleApp.controller.App"
-xmlns="sap.m"
-xmlns:form="sap.ui.layout.form"
-xmlns:core="sap.ui.core"
-xmlns:Item="sap.ui.core.Item"
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="st.b33.SimpleApp.controller.view2"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:Item="sap.ui.core.Item">
 
->
-
-<Page title="screen2--view2" showNavButton="true" navButtonPress="onBack" >
-<!-- <Button text="Go back screen1" press="onBack"></Button> -->
-<ObjectHeader 
-title="{name}" 
-intro="{type}" 
-number="{price}" 
-numberUnit="{unit}" 
-icon="{image}"
->
-</ObjectHeader>
+    <Page title="screen2--view2" showNavButton="true" navButtonPress="onBack">
+        <!-- <Button text="Go back screen1" press="onBack"></Button> -->
+        <ObjectHeader title="{name}" intro="{type}" number="{price}" numberUnit="{unit}" icon="{image}">
+        </ObjectHeader>
 
 
-<IconTabBar >
-<items>
-<IconTabFilter icon="sap-icon://warning" iconColor="Critical" tooltip="Fruits" >
-<Text text="FruitsInformation"></Text>
-<content>
-<core:Fragment fragmentName="st.b33.SimpleApp.fragments.simpleForm" type="XML">
-</core:Fragment>
-</content>
-</IconTabFilter>
-   
+        <IconTabBar >
+            <items>
+                <IconTabFilter icon="sap-icon://warning" iconColor="Critical" tooltip="Fruits">
+                    <Text text="FruitsInformation"></Text>
+                    <content>
+                        <core:Fragment fragmentName="st.b33.SimpleApp.fragments.simpleForm" type="XML">
+                        </core:Fragment>
+                    </content>
+                </IconTabFilter>
 
 
-<IconTabFilter icon="sap-icon://supplier" iconColor="Marker" tooltip="Suppliers" count="1"  >
-<Text text="SupplierInformation"></Text>
 
-<core:Fragment fragmentName="st.b33.SimpleApp.fragments.suppliers" type="XML">
-</core:Fragment>
+                <IconTabFilter icon="sap-icon://supplier" iconColor="Marker" tooltip="Suppliers" count="1">
+                    <Text text="SupplierInformation"></Text>
+
+                    <core:Fragment fragmentName="st.b33.SimpleApp.fragments.suppliers" type="XML">
+                    </core:Fragment>
 
 
-</IconTabFilter>
-<IconTabFilter icon="sap-icon://home" iconColor="Neutral" tooltip="Cities"  >
-<Text text="Cities Information"></Text>
+                </IconTabFilter>
+                <IconTabFilter icon="sap-icon://home" iconColor="Neutral" tooltip="Cities">
+                    <Text text="Cities Information"></Text>
 
-<core:Fragment fragmentName="st.b33.SimpleApp.fragments.Cities" type="XML">
-</core:Fragment>
+                    <core:Fragment fragmentName="st.b33.SimpleApp.fragments.Cities" type="XML">
+                    </core:Fragment>
 
-</IconTabFilter>
-</items>
-</IconTabBar>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
 
-</Page>
+    </Page>
 
 </mvc:View>
