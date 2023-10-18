@@ -1,0 +1,7 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    >
+<SelectDialog title="Pop screen" multiSelect="true" confirm="onPopupConfirm"></SelectDialog>
+</core:FragmentDefinition>
