@@ -90,12 +90,24 @@ sap.ui.define([
             }
         },
         onPopupConfirm: function (oEvent) {
-            var oWhichItemIsSelected = oEvent.getParameter("selectedItem");
-            debugger;
-            var oSelectedCitiName = oWhichItemIsSelected.getLabel();
-            if (oEvent.getSource().getId().indexOf("supplier") != -1) {
+            if (oEvent.getSource().getId().indexOf("citi") != -1) {
+                var oWhichItemIsSelected = oEvent.getParameter("selectedItem");
+                var oSelectedCitiName = oWhichItemIsSelected.getLabel();
                 this.oCitiName.setValue(oSelectedCitiName);
             }
+            if (oEvent.getSource().getId().indexOf("supplier") != -1) {
+                //1 - get selected items
+                var oSelectedItems = oEvent.getParameter("selectedItems"); 
+                //2 - Get table entries 
+                var oTable = this.getView().byId("idTable").getItems();
+                //3 - Apply for each statement, to push data to table data.
+                // oSelectedItems.forEach(element => {
+                // //4 - Inject item
+                //     oTable
+                // }); 
+                debugger;
+            }
+            
         }
     })
 });
