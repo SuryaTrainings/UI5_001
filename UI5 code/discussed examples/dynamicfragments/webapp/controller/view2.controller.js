@@ -96,6 +96,9 @@ sap.ui.define([
                 this.oCitiName.setValue(oSelectedCitiName);
             }
             if (oEvent.getSource().getId().indexOf("supplier") != -1) {
+
+                var filters = [];
+
                 //1 - get selected items
                 var oSelectedItems = oEvent.getParameter("selectedItems"); 
                 //2 - Get table entries 
@@ -103,9 +106,21 @@ sap.ui.define([
                 //3 - Apply for each statement, to push data to table data.
                 // oSelectedItems.forEach(element => {
                 // //4 - Inject item
-                //     oTable
+                    // oSelectedItems.forEach(element => {
+                    // oTable[element.getBinding]    
+                    // });
                 // }); 
                 debugger;
+                if( oSelectedItems.length > 0){
+                    $.each( oSelectedItems, function(i, UIitem){
+                        filters.push(
+                            new sap.ui.model.Filter(
+                                "name", sap.ui.model.FilterOperator.EQ, UIitem.getLabel() )
+                        )
+                    } )
+                }
+                debugger;
+                this.getView().byId("idTable").getBinding("items").filter(filters);
             }
             
         }
