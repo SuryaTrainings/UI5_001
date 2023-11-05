@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZUI_ODATA_01_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Product" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PRODUCT_ID"/>
+                </Key>
+                <Property Name="PRODUCT_ID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="EPM: Product ID" sap:updatable="false"/>
+                <Property Name="TYPE_CODE" Type="Edm.String" sap:unicode="false" sap:label="EPM: Product Type Code"/>
+                <Property Name="CATEGORY" Type="Edm.String" sap:unicode="false" sap:label="EPM: Product Category"/>
+                <Property Name="NAME" Type="Edm.String" sap:unicode="false" sap:label="EPM: Text field for names and descriptions"/>
+                <Property Name="DESCRIPTION" Type="Edm.String" sap:unicode="false" sap:label="EPM: Text field for names and descriptions"/>
+                <Property Name="SUPPLIER_ID" Type="Edm.String" sap:unicode="false" sap:label="EPM: Business Partner ID"/>
+                <Property Name="SUPPLIER_NAME" Type="Edm.String" sap:unicode="false" sap:label="EPM: Company Name"/>
+                <Property Name="WEIGHT_MEASURE" Type="Edm.String" sap:unicode="false" sap:unit="WEIGHT_UNIT" sap:label="EPM: Weight Measure"/>
+                <Property Name="WEIGHT_UNIT" Type="Edm.String" sap:unicode="false" sap:label="EPM: Weight Unit"/>
+                <Property Name="PRICE" Type="Edm.Decimal" Precision="13" Scale="2" sap:unicode="false" sap:unit="CURRENCY_CODE" sap:label="EPM: Product Unit Price"/>
+                <Property Name="CURRENCY_CODE" Type="Edm.String" sap:unicode="false" sap:label="EPM: Currency Code"/>
+                <NavigationProperty Name="To_Supplier" Relationship="ZUI_ODATA_01_SRV.Product_2_Supplier" FromRole="FromRole_Product_2_Supplier" ToRole="ToRole_Product_2_Supplier"/>
+            </EntityType>
+            <EntityType Name="Supplier" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BP_ID"/>
+                </Key>
+                <Property Name="BP_ID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BP_ROLE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EMAIL_ADDRESS" Type="Edm.String" Nullable="false" sap:unicode="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="COMPANY_NAME" Type="Edm.String" Nullable="false" sap:unicode="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CITY" Type="Edm.String" Nullable="false" sap:unicode="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="COUNTRY" Type="Edm.String" Nullable="false" sap:unicode="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ProdPic" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PRODUCT_ID"/>
+                </Key>
+                <Property Name="PRODUCT_ID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PRODUCT_PIC_URL" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MIME_TYPE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Media" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PRODUCT_ID"/>
+                </Key>
+                <Property Name="PRODUCT_ID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PRODUCT_PIC_URL" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MIME_TYPE" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="Product_2_Supplier" sap:content-version="1">
+                <End Type="ZUI_ODATA_01_SRV.Product" Multiplicity="1" Role="FromRole_Product_2_Supplier"/>
+                <End Type="ZUI_ODATA_01_SRV.Supplier" Multiplicity="1" Role="ToRole_Product_2_Supplier"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Product_2_Supplier">
+                        <PropertyRef Name="PRODUCT_ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Product_2_Supplier">
+                        <PropertyRef Name="BP_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZUI_ODATA_01_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ProductSet" EntityType="ZUI_ODATA_01_SRV.Product" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SupplierSet" EntityType="ZUI_ODATA_01_SRV.Supplier" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ProdPicSet" EntityType="ZUI_ODATA_01_SRV.ProdPic" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="MediaSet" EntityType="ZUI_ODATA_01_SRV.Media" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="Product_2_SupplierSet" Association="ZUI_ODATA_01_SRV.Product_2_Supplier" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProductSet" Role="FromRole_Product_2_Supplier"/>
+                    <End EntitySet="SupplierSet" Role="ToRole_Product_2_Supplier"/>
+                </AssociationSet>
+                <FunctionImport Name="GetMostExpensiveProduct" ReturnType="ZUI_ODATA_01_SRV.Product" EntitySet="ProductSet" m:HttpMethod="GET" sap:action-for="ZUI_ODATA_01_SRV.Product">
+                    <Parameter Name="I_CATEGORY" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+                <FunctionImport Name="GetMostChepestProduct" ReturnType="ZUI_ODATA_01_SRV.Product" EntitySet="ProductSet" m:HttpMethod="GET" sap:action-for="ZUI_ODATA_01_SRV.Product"/>
+                <FunctionImport Name="GetHighestPriceProduct" ReturnType="ZUI_ODATA_01_SRV.Product" EntitySet="ProductSet" m:HttpMethod="GET" sap:action-for="ZUI_ODATA_01_SRV.Product"/>
+                <FunctionImport Name="GetLowestPriceProduct" ReturnType="ZUI_ODATA_01_SRV.Product" EntitySet="ProductSet" m:HttpMethod="GET" sap:action-for="ZUI_ODATA_01_SRV.Product"/>
+                <FunctionImport Name="GetCategoryWiseHighPriceProduct" ReturnType="ZUI_ODATA_01_SRV.Product" EntitySet="ProductSet" m:HttpMethod="GET" sap:action-for="ZUI_ODATA_01_SRV.Product">
+                    <Parameter Name="I_CATEGORY" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="http://s4hana.ides.com:9222/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://s4hana.ides.com:9222/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
