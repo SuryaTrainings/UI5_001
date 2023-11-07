@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: odataprojectwo
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+          - path: /sap
+            url: http://surya.ides.com:9333
+            client: '100'
+            destination: S4H1909
+

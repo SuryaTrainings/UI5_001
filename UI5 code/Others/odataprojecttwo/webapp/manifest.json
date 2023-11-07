@@ -1,0 +1,61 @@
+{   
+    "_version": "1.50.0",
+    "sap.app": {
+        "id":"st.b33.simpleApp",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title":"{{title}}",
+        "description":"{{description}}",
+        "i18n": "i18n/i18n.properties",
+        "dataSources":{
+            "oDataServices":{
+                "type": "OData",
+                "uri": "http://s4hana.ides.com:9222/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui":{
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "technology": "UI5",
+        "supportedThemes": ["sap_fiori_3_dark", "sap_fiori_3","sap_horizon_hcb"]
+    },
+    "sap.ui5":{
+       "dependencies": {
+        "minUI5Version": "1.100.0",
+        "libs": {
+            "sap.m": {
+                "minVersion": "1.100.0"
+            }
+        }
+       },
+       "contentDensities": {
+        "cozy": true,
+        "compact": true
+       },
+       "models": {
+        "i18n":{
+            "type":"sap.ui.model.resource.ResourceModel",
+            "settings": {
+                "bundleUrl": "i18n/i18n.properties"
+            }
+        },
+        "":{ "type": "sap.ui.model.odata.v2.ODataModel",
+            "dataSource": "oDataServices"
+
+        },
+        "others":{
+            "type": "sap.ui.model.json.JSONModel",
+            "uri": "modelData/fruits.json"
+        }
+       }
+    }
+}
