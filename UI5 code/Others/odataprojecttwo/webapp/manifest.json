@@ -12,7 +12,7 @@
         "dataSources":{
             "oDataServices":{
                 "type": "OData",
-                "uri": "http://s4hana.ides.com:9222/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/",
+                "uri": "/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/",
                 "settings": {
                     "odataVersion": "2.0"
                 }

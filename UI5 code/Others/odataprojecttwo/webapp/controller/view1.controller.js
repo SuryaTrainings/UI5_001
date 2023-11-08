@@ -43,10 +43,11 @@ sap.ui.define([
          var oSearchInput = oEvent.getParameter("newValue");
 
          //Create Filter 
-         var oFilterName = new Filter("name", FilterOperator.Contains, oSearchInput );
+         var oFilterName = new Filter("CATEGORY", FilterOperator.Contains, oSearchInput );
          var oFilterType = new Filter("type", FilterOperator.Contains, oSearchInput );
          var oFilter = new Filter({
-            filters: [oFilterName, oFilterType],
+            //filters: [oFilterName, oFilterType],
+            filters: [oFilterName],
             and: false
          });
 
@@ -76,7 +77,9 @@ sap.ui.define([
             var oView2 = this.getView().getParent().getParent().getDetailPages()[0];
 
             //Get view2 refernce             
-            oView2.bindElement(oSpath);
+            oView2.bindElement(oSpath,{
+                expand: 'To_Supplier'
+            });
 
             this.onNext();
         }

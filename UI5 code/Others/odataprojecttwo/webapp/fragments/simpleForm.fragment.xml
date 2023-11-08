@@ -4,13 +4,19 @@
     <form:SimpleForm >
         <form:content>
             <Label text="Name"></Label>
-            <Text text="{name}"></Text>
+            <Text text="{NAME}"></Text>
             <Label text="Type"></Label>
-            <Text text="{type}"></Text>
+            <Text text="{DESCRIPTION}"></Text>
             <Label text="Color"></Label>
-            <Text text="{color}"></Text>
+            <Text text="{NAME}"></Text>
             <Label text="Stock avaliable"></Label>
-            <Text text="{price} {unit}"></Text>
+            <Text text="{PRICE} {CURRENCY_CODE}"></Text>
+            <Label text="Supplier ID"></Label>
+            <Text text="{To_Supplier/BP_ID}"></Text>
+            <Label text="Supplier Name"></Label>
+            <Text text="{To_Supplier/COMPANY_NAME}"></Text>
+            <Label text="Supplier City"></Label>
+            <Text text="{To_Supplier/CITY}"></Text>
         </form:content>
     </form:SimpleForm>
 

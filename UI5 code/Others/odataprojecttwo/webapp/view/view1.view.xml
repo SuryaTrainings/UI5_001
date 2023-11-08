@@ -6,23 +6,25 @@
             <Button icon="sap-icon://forward" press="onNext"></Button>
         </headerContent>
         <SearchField liveChange="onSerach"></SearchField>
-        <List id="idListData" items="{ path : '/Fruits',
+        <List id="idListData" items="{ path : '/ProductSet',
                                        sorter : {
-                                        path: 'name',
+                                        path: 'NAME',
                                         descending : true
                                        } }" 
                                        mode="SingleSelectMaster"
                                        selectionChange="onSelectionChange"
                                        delete="onDelete"
+                                       growing="true"
+                                       growingThreshold="10"
 
                                        >
             <items>
                 <ObjectListItem 
-                    title="{name}"
-                    intro="{type}"
-                    number="{price}"
-                    numberUnit="{unit}"
-                    icon="{image}"
+                    title="{NAME}"
+                    intro="{CATEGORY}"
+                    number="{PRICE}"
+                    numberUnit="{CURRENCY_CODE}"
+                    icon="{sap-icon://product}"
                     ></ObjectListItem>
             </items>
         </List>
