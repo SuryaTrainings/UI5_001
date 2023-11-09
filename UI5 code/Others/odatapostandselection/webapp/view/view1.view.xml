@@ -1,0 +1,31 @@
+<mvc:View xmlns:control="sap.gantt.control" xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.view1">
+    <Page title="Screen - 1 / view - 1">
+        <!-- <Button text="Go to next screen - 2 / view - 2" press="onNext"></Button> -->
+        <headerContent>
+            <Button icon="sap-icon://forward" press="onNext"></Button>
+        </headerContent>
+        <SearchField liveChange="onSerach"></SearchField>
+        <List id="idListData" items="{ path : '/ProductSet',
+                                       sorter : {
+                                        path: 'CATEGORY',
+                                        descending : true
+                                       } }" 
+                                       mode="SingleSelectMaster"
+                                       selectionChange="onSelectionChange"
+                                       delete="onDelete"
+                                       growing="true"
+                                       growingThreshold="10"
+                                       >
+            <items>
+                <ObjectListItem 
+                    title="{PRODUCT_ID}"
+                    intro="{CATEGORY}"
+                    number="{PRICE}"
+                    numberUnit="{CURRENCY_CODE}"
+                    icon=""
+                    ></ObjectListItem>
+            </items>
+        </List>
+    </Page>
+</mvc:View>

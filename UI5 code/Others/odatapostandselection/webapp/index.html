@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <!-- Bootstrap script  -->
+    <script id="sap-ui-bootstrap" 
+            src="https://ui5.sap.com/resources/sap-ui-core.js" 
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3_dark" 
+            data-sap-ui-resourceroots='{
+                "st.b33.simpleApp":"./"
+                        }' 
+            data-sap-ui-bindingSyntax="complex">
+    </script>
+    <!-- Application script -->
+    <script>
+        var oComponentContainer = new sap.ui.core.ComponentContainer({
+            name:"st.b33.simpleApp" 
+        });
+        oComponentContainer.placeAt("canvas");
+    </script>
+</head>
+
+<body class="sapUiBody">
+    <!-- UI Area -->
+    <div id="canvas"></div> <br>
+</body>
+
+</html>
