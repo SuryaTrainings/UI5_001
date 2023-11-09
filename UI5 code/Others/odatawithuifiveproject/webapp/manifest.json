@@ -1,0 +1,106 @@
+{   
+    "_version": "1.50.0",
+    "sap.app": {
+        "id":"st.b33.simpleApp",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title":"{{title}}",
+        "description":"{{description}}",
+        "i18n": "i18n/i18n.properties",
+        "dataSources": {
+            "ODataServices":{
+                "uri": "/sap/opu/odata/SAP/ZUI_ODATA_01_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui":{
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        },
+        "technology": "UI5",
+        "supportedThemes": ["sap_fiori_3_dark", "sap_fiori_3","sap_horizon_hcb"]
+    },
+    "sap.ui5":{
+
+        "rootView":{
+            "id": "idAppView",
+            "viewName": "st.b33.simpleApp.view.App",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+                "viewType": "XML",
+                "viewPath": "st.b33.simpleApp.view",
+                "controlId": "idAppCon",
+                "clearControlAggregation": true
+            },
+            "routes":[
+                {
+                    "name": "home",
+                    "pattern": "",
+                    "target": ["leftPage","rightPage"]
+                },
+                {
+                    "name":"subsequent",
+                    "pattern": "product/{pid}",
+                    "target":["leftPage","productPage"]
+                }
+            ],
+            "targets": {
+                "leftPage":{
+                    "viewName": "view1",
+                    "viewId": "idView1",
+                    "controlAggregation": "masterPages"
+                },
+                "rightPage":{
+                    "viewName": "view3",
+                    "viewId": "idView3",
+                    "controlAggregation": "detailPages"
+                },
+                "productPage":{
+                    "viewName": "view2",
+                    "viewId": "idView2",
+                    "controlAggregation": "detailPages"    
+                }
+            }
+        },
+
+
+       "dependencies": {
+        "minUI5Version": "1.100.0",
+        "libs": {
+            "sap.m": {
+                "minVersion": "1.100.0"
+            }
+        }
+       },
+       "contentDensities": {
+        "cozy": true,
+        "compact": true
+       },
+       "models": {
+        "i18n":{
+            "type":"sap.ui.model.resource.ResourceModel",
+            "settings": {
+                "bundleUrl": "i18n/i18n.properties"
+            }
+        },
+        "local":{
+            "type": "sap.ui.model.json.JSONModel",
+            "uri": "modelData/fruits.json"
+        },
+        "":{
+            "type": "sap.ui.model.odata.v2.ODataModel",
+            "dataSource": "ODataServices"
+        }
+       }
+    }
+}
