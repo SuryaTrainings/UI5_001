@@ -59,7 +59,15 @@
                     "target" : [
                         "leftPage","productPage"
                     ]
+                },
+                {
+                    "name": "addProduct",
+                    "pattern": "addNewProductURI",
+                    "target" : [
+                        "leftPage","addProductPage"
+                    ]
                 }
+                
             ],
             "targets": {
                 "leftPage": {
@@ -77,7 +85,13 @@
                     "viewId": "View2",
                     "controlAggregation": "detailPages"
                     
+                },"addProductPage":{
+                    "viewName": "addProductPage",
+                    "viewId": "idAddProductPage",
+                    "controlAggregation": "detailPages"
+                    
                 }
+                
             }
         },
         "dependencies": {

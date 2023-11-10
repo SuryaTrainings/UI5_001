@@ -27,5 +27,13 @@
                     ></ObjectListItem>
             </items>
         </List>
+
+        <footer>
+        <Toolbar 
+        >
+        <ToolbarSpacer ></ToolbarSpacer>
+        <Button text="Add" icon="sap-icon://add" press="onAdd"></Button>
+        </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

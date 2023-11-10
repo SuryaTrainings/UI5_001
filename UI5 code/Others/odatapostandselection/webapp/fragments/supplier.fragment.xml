@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form">
-    <Table id="idTable" items="{/Suppliers}" >
+    <Table id="idTable" items="{/SupplierSet}" >
         <headerToolbar>
             <Toolbar >
                 <ToolbarSpacer ></ToolbarSpacer>
@@ -26,7 +26,7 @@
             </Column>
             <Column minScreenWidth="tablet" demandPopin="true">
                 <header>
-                    <Label text="Establised year"></Label>
+                    <Label text="Partner Role"></Label>
                 </header>
             </Column>
         </columns>
@@ -34,10 +34,10 @@
         <items>
             <ColumnListItem >
                 <cells>
-                    <Text text="{name}"></Text>
-                    <Text text="{contactPerson}"></Text>
-                    <Input value="{city}" showValueHelp="true" valueHelpRequest="oValueHelp"></Input>
-                    <Text text="{sinceWhen}"></Text>
+                    <Text text="{BP_ID} - {COMPANY_NAME}"></Text>
+                    <Text text="{EMAIL_ADDRESS}"></Text>
+                    <Input value="{CITY}" showValueHelp="true" valueHelpRequest="oValueHelp"></Input>
+                    <Text text="{BP_ROLE}"></Text>
                 </cells>
             </ColumnListItem>
         </items>

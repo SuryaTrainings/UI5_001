@@ -79,17 +79,20 @@ sap.ui.define([
             //Extract the item index.
             var oSpath = oSelectedItem.getBindingContextPath();
 
-            debugger;
+            // debugger;
 
             //Bind the data to view 2.
-            var oView2 = this.getView().getParent().getParent().getDetailPages()[0];
+            // var oView2 = this.getView().getParent().getParent().getDetailPages()[0];
 
             //Get view2 refernce             
-            oView2.bindElement(oSpath, {
-                expand: 'To_Supplier' }
-                );
+            // oView2.bindElement(oSpath, {
+            //     expand: 'To_Supplier' }
+            //     );
 
             this.onNext(oSpath);
+        },
+        onAdd: function(){
+            this.oRouter.navTo("addProduct");
         }
     })
 });

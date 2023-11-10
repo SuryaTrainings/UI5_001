@@ -7,6 +7,29 @@ sap.ui.define([
     'use strict';
     return BaseController.extend("st.b33.simpleApp.controller.view2", {
         oFormatter: Formatter,
+        
+        onInit: function(){
+            //Get this view router
+            this.oRouter = this.getOwnerComponent().getRouter();
+            //Register this event to handle data display
+            this.oRouter.getRoute("productData").attachMatched(this.loadProductData, this);
+        },
+
+        loadProductData: function(oEvent) {
+
+            debugger;
+            
+            console.log(oEvent);
+
+            var vArguments = oEvent.getParameter("arguments");
+
+            var sPath = "/" + vArguments.pid;
+
+            this.getView().bindElement(sPath,{
+                expand: 'To_Supplier'
+            });
+        },
+        
         onBack: function () {
             var oView = this.getView();
             var oAppCon = oView.getParent();
