@@ -25,7 +25,7 @@ sap.ui.define([
                     "SUPPLIER_NAME": "Talpa",
                     "WEIGHT_MEASURE": "4.200 ",
                     "WEIGHT_UNIT": "KG",
-                    "PRICE": "0",
+                    "PRICE": 0,
                     "CURRENCY_CODE": "USD"
                 }
             });
