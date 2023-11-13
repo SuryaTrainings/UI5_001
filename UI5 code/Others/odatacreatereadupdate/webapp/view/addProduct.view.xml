@@ -1,0 +1,38 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.addProduct">
+    <Page title="Add product">
+        <VBox >
+            <form:SimpleForm >
+                <Label text="Product ID"></Label>
+                <Input id="idProductID" value="{prod>/ProductSet/PRODUCT_ID}" submit="onSubmit"></Input>
+
+                <Label text="Product Name"></Label>
+                <Input id="idProductName" value="{prod>/ProductSet/NAME}"></Input>
+
+
+                <Label text="Product Description"></Label>
+                <Input id="idProductDesc" value="{prod>/ProductSet/DESCRIPTION}"></Input>
+
+                <Label text="Product Category"></Label>
+                <Input id="idProductCategory" value="{prod>/ProductSet/CATEGORY}"></Input>
+
+                <Label text="Product Price"></Label>
+                <Input id="idProductPrice" value="{prod>/ProductSet/PRICE}"></Input>
+
+                <Label text="Currency Code"></Label>
+                <Input id="idCurrencyCode" value="{prod>/ProductSet/CURRENCY_CODE}"></Input>
+
+            </form:SimpleForm>
+        </VBox>
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button text="Reset Data" icon="sap-icon://reset" press="onReset"
+                    type = "Attention"></Button>
+                <Button text="Save Data" icon="sap-icon://save" press="onSave"
+                    type="Success" ></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
