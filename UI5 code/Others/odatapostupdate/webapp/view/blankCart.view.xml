@@ -1,0 +1,9 @@
+<mvc:View xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.blankCart">
+    <Page title="Car image ">
+        <Image height="100%" width="100%" 
+            src="https://www.vinsolutions.com/wp-content/uploads/sites/2/vinsolutions/media/Vin-Images/news-blog/Empty_Shopping_Cart_blog.jpg" ></Image>
+    </Page>
+</mvc:View>
