@@ -1,0 +1,41 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="st.b33.simpleApp.controller.addProduct">
+    <Page title="Add product">
+        <VBox >
+            <form:SimpleForm >
+                <Label text="Product ID"></Label>
+                <Input id="idProductID" value="{prod>/ProductSet/PRODUCT_ID}" submit="onGet"></Input>
+
+                <Label text="Product Name"></Label>
+                <Input id="idProductName" value="{prod>/ProductSet/NAME}"></Input>
+
+
+                <Label text="Product Description"></Label>
+                <Input id="idProductDesc" value="{prod>/ProductSet/DESCRIPTION}"></Input>
+
+                <Label text="Product Category"></Label>
+                <Input id="idProductCategory" value="{prod>/ProductSet/CATEGORY}"></Input>
+
+                <Label text="Product Price"></Label>
+                <Input id="idProductPrice" value="{prod>/ProductSet/PRICE}"></Input>
+
+                <Label text="Currency Code"></Label>
+                <Input id="idCurrencyCode" value="{prod>/ProductSet/CURRENCY_CODE}"></Input>
+
+            </form:SimpleForm>
+
+            <Image height="400px" width="400px" id="idProductImage"></Image>
+        </VBox>
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button text="Delete Data" icon="sap-icon://delete" type="Negative" press="onDelete"></Button>
+                <Button text="Reset Data" icon="sap-icon://reset" type="Critical" press="onReset"></Button>
+                <Button text="Save Data" id="idSaveData" icon="sap-icon://save" type="Accept" press="onSave"></Button>
+                <Button text="Get Data" icon="sap-icon://save" type="Neutral" press="onGet"></Button>
+                <Button text="Get Expensive Product" icon="sap-icon://save" type="Emphasized" press="onGetExpensiveProduct"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

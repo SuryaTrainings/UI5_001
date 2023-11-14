@@ -1,0 +1,13 @@
+specVersion: '3.0'
+metadata:
+  name: fiorilikeapp
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+        - path: /sap/opu/odata
+          url: http://183.82.1.220:9222/
+          scp: true
