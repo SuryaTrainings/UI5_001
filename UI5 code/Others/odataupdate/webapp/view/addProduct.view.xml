@@ -24,7 +24,6 @@
                 <Input id="idCurrencyCode" value="{prod>/ProductSet/CURRENCY_CODE}"></Input>
 
             </form:SimpleForm>
-            <Image height="500px" width="500px" id="idPhoto"></Image>
         </VBox>
         <footer>
             <Toolbar >
@@ -33,10 +32,6 @@
                     type = "Attention"></Button>
                 <Button text="Save Data" icon="sap-icon://save" press="onSave"
                     type="Success" ></Button>
-                <Button text="Delete Product" icon="sap-icon://save" press="onDelete"
-                    type="Negative" ></Button>
-                <Button text="Get Costly Product" icon="sap-icon://activate" press="onCostlyProduct"
-                    type="Attention" ></Button>
             </Toolbar>
         </footer>
     </Page>
