@@ -75,7 +75,7 @@ sap.ui.define([
      });
      var sImagePath = 
      '/sap/opu/odata/SAP/ZUI_ODATA_02_SRV/' +
-     "MediaSet('"+ 
+     "ProdPic('"+ 
      oinput + 
      "')/$value";
      this.getView().byId("idImageProduct").setSrc(sImagePath);
@@ -130,16 +130,6 @@ sap.ui.define([
             //Handle error log
 
         },
-
-
-
-
-
-
-
-
-
-
 
         onSave: function(){
 
