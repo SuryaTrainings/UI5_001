@@ -5,7 +5,7 @@
         <VBox >
             <form:SimpleForm >
                 <Label text="Product ID"></Label>
-                <Input id="idProductID" value="{prod>/ProductSet/PRODUCT_ID}" submit="onGet"></Input>
+                <Input id="idProductID" enabled="{prod>/enable}" value="{prod>/ProductSet/PRODUCT_ID}" submit="onGet"></Input>
 
                 <Label text="Product Name"></Label>
                 <Input id="idProductName" value="{prod>/ProductSet/NAME}"></Input>
@@ -32,7 +32,7 @@
                 <ToolbarSpacer ></ToolbarSpacer>
                 <Button text="Delete Data" icon="sap-icon://delete" type="Negative" press="onDelete"></Button>
                 <Button text="Reset Data" icon="sap-icon://reset" type="Critical" press="onReset"></Button>
-                <Button text="Save Data" id="idSaveData" icon="sap-icon://save" type="Accept" press="onSave"></Button>
+                <Button text="Save Data"  id="idSaveData" icon="sap-icon://save" type="Accept" press="onSave"></Button>
                 <Button text="Get Data" icon="sap-icon://save" type="Neutral" press="onGet"></Button>
                 <Button text="Get Expensive Product" icon="sap-icon://save" type="Emphasized" press="onGetExpensiveProduct"></Button>
             </Toolbar>
