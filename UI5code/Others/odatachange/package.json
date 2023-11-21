@@ -11,7 +11,6 @@
     "@sap/generator-fiori": "^1.11.4",
     "@sap/ux-ui5-tooling": "^1.11.4",
     "@ui5/cli": "^3.7.1",
-    "generator-": "file:sap/fiori:deploy-config",
     "npm": "^8.19.4",
     "yo": "^5.0.0"
   },
